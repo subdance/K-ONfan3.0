@@ -1,8 +1,16 @@
 <template>
     <div id="app">
-        <router-view/>
     </div>
 </template>
 
-<style lang="scss">
+<script>
+
+export default {
+    name: 'app',
+    components: {
+    }
+}
+</script>
+
+<style>
 </style>
