@@ -15,6 +15,7 @@
             v-show='moePlayer.isFixPlayerShow'
             />
         <el-header>
+            <navbar></navbar>
         </el-header>
 
         <el-main>
@@ -22,15 +23,18 @@
         </el-main>
 
         <el-footer>
-
+            <footbar></footbar>
         </el-footer>
     </el-container>
 </template>
 
 <script>
-
+import navbar from "@/components/global/global_navbar.vue"
+import footbar from "@/components/global/global_footbar.vue"
 export default {
     components: {
+        navbar,
+        footbar
     },
     data(){
         return {
@@ -76,7 +80,18 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    .el-main {
+    .el-header {
+        background-color: rgba(255, 255, 255, 0.377);
+        position: relative;
+        z-index: 999;
         padding: 0px;
     }
+    .el-main {
+        padding: 0px;
+        margin-top: -60px;
+    }
+    .el-footer {
+        padding: 0px;
+    }
+    
 </style>

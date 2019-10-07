@@ -14,7 +14,7 @@
             </transition>
         </div>
         <div id="box2">
-            <!-- <div id="p1"><img class="icon" src='../../assets/background/3.png'></div> -->
+            <div id="p1"><img class="icon" src='../../assets/backgrounds/3.png'></div>
         </div>
     </div>
 </template>
@@ -63,7 +63,7 @@ export default {
 <style scoped>
     .intro-text {
         letter-spacing: 0.3rem;
-        font-size: 3.5rem;
+        font-size: 2rem;
         color: #F2F6FC;
         font-family: 'ZCOOL KuaiLe', cursive;
     }
@@ -94,7 +94,7 @@ export default {
         z-index: -1;
     }
     .main-intro::first-letter {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
     #box1 {
         width: 100%;
