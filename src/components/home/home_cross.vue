@@ -63,12 +63,13 @@ export default {
     .main-container {
         width: 100%;
         padding-top: 30px;
+        max-width: 1450px;
     }
     .single-line {
         width: 100%;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
     }
     .single-line:nth-child(2n + 1) {
@@ -144,13 +145,13 @@ export default {
         flex: 0 0 600px;
     }
     .text-holder > p {
-        text-align: left;
+        text-align: right;
         font-size: 26px;
         text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
         font-family: 'ZCOOL KuaiLe', cursive;
     }
     .text-holder-odd > p {
-        text-align: right;
+        text-align: left;
     }
 
 
