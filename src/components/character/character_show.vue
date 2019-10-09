@@ -57,7 +57,7 @@
       setHeight(){
         if(window.innerWidth < 600){
           this.carouselHeight = '300px';
-          this.indicatorPos = 'outside';
+          this.indicatorPos = 'inside';
         }
         else{
           this.carouselHeight = 100 + 'vh';

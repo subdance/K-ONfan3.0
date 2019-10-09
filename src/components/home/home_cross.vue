@@ -64,6 +64,7 @@ export default {
         width: 100%;
         padding-top: 30px;
         max-width: 1450px;
+        margin: auto;
     }
     .single-line {
         width: 100%;

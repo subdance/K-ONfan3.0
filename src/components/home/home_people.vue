@@ -54,6 +54,7 @@ export default {
     width: 100%;
     position: relative;
     max-width: 1450px;
+    margin: auto;
   }
   .contentImg {
     width: 15rem;
