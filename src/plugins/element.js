@@ -8,7 +8,9 @@ import {
     Carousel,
     CarouselItem,
     Row,
-    Col
+    Col,
+    Drawer,
+    Dialog
 } from 'element-ui'
 
 Vue.use(Button);
@@ -20,4 +22,6 @@ Vue.use(Carousel);
 Vue.use(CarouselItem);
 Vue.use(Row);
 Vue.use(Col);
+Vue.use(Drawer);
+Vue.use(Dialog);
 

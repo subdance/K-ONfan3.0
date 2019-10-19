@@ -1,10 +1,11 @@
 <template lang="html">
   <div class="navHolder">
-        <div><router-link to="/"  @click='changeFixPlayer(true)'><span class="navTextHome">HTT活动室&nbsp</span><i class="icon fa fa-home fa-lg" style="color: white;"></i></router-link></div>
-        <div><router-link to="/c" @click='changeFixPlayer(true)'><span class="navTextHome">部员册&nbsp</span><i class="icon fa fa-address-book fa-lg" style="color: white;"></i></span></router-link></div>
-        <div><router-link to="/a" @click='changeFixPlayer(true)'><span class="navTextHome">茶色相簿&nbsp</span><i class="icon fa fa-image fa-lg" style="color: white;"></i></span></router-link></div>
-        <div><router-link to="/v" @click='changeFixPlayer(true)'><span class="navTextHome">放映机&nbsp</span><i class="icon fa fa-video-camera fa-lg" style="color: white;"></i></span></router-link></div>
-        <div><router-link to="/t" ><span class="navTextHome" style="color: white;">雲上茶屋&nbsp</span><i class="icon fa fa-coffee fa-lg" style="color: white;"></i></span></router-link></div>
+        <div class="single-holder" v-for="item in routerList">
+            <router-link :to=item.router>
+                <span class="navTextHome">{{item.title}}&nbsp</span>
+                <i :class="item.icon" style="color: white;"></i>
+            </router-link>
+        </div>
         <div class="iconHolder">
             <a
                 href="https://baike.baidu.com/item/%E8%BD%BB%E9%9F%B3%E5%B0%91%E5%A5%B3/5182240?fr=aladdin"
@@ -18,10 +19,37 @@
 
 <script>
 export default {
-    methods: {
-        changeFixPlayer(reg){
-        },
-    },
+    data() {
+        return {
+            routerList: [
+                {
+                    title: 'HTT活动室',
+                    router: '/',
+                    icon: 'icon fa fa-home fa-lg'
+                },
+                {
+                    title: '部员册',
+                    router: '/character',
+                    icon: 'icon fa fa-address-book fa-lg'
+                },
+                {
+                    title: '茶色相簿',
+                    router: '/album',
+                    icon: 'icon fa fa-image fa-lg'
+                },
+                {
+                    title: '放映机',
+                    router: '/video',
+                    icon: 'icon fa fa-video-camera fa-lg'
+                },
+                {
+                    title: '云上茶屋',
+                    router: '/blog',
+                    icon: 'icon fa fa-coffee fa-lg'
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -43,7 +71,7 @@ export default {
         height: 60px;
         padding: 0 20px;
 
-        div {
+        .single-holder {
             text-align: center;
             margin-right: 1.2rem;
 
@@ -51,57 +79,46 @@ export default {
                 margin: auto;
                 margin-right: 0px;
             }
-
             .navTextHome {
-                font-size: 16px;
+                font-size: 1.3rem;
                 color: #df000a;
-                font-weight: bold;
+                font-family: 'ZCOOL KuaiLe', cursive;
+                transition: all 200ms ease-in-out;
             }
 
-            .navTextHome:hover {
-                color: red;
-                text-shadow: 2px 2px 1px black;
-                transition: all 200ms ease-in-out;
+            &:hover {
+
+                .navTextHome {
+                    color: red;
+                    text-shadow: 2px 2px 1px black;
+                }
             }
         }
     }
-    .navHolder > div::after {
-        content: '';
-        display: block;
-        border-bottom: 2px solid white;
-        transform: scale(0);
-        transition: transform 250ms ease-in-out;
-    }
-    .navHolder > div:hover::after {
-        transform: scale(1);
-    }
+    // .navHolder > div::after {
+    //     content: '';
+    //     display: block;
+    //     border-bottom: 2px solid white;
+    //     transform: scale(0);
+    //     transition: transform 250ms ease-in-out;
+    // }
+    // .navHolder > div:hover::after {
+    //     transform: scale(1);
+    // }
     img {
-        height: 60px;
-        margin-top: -3px;
+        height: 50px;
     }
     .iconHolder {
-        display: inline-block;
-        height: 60px;
         margin: 0;
         position: absolute;
         top: 50%;
         left: 50%;
-        -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
     }
     @media only screen and (max-width: 600px) {
         .navHolder > div {
             flex-grow: 1;
             margin-right: 0.5rem;
-        }
-        .navHolder > div::after {
-            content: '';
-            position: relative;
-            top: 0.5rem;
-            display: block;
-            border-bottom: 2px solid white;
-            transform: scale(0);
-            transition: transform 250ms ease-in-out;
         }
         .navTextHome {
             display: none;

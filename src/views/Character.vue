@@ -21,6 +21,7 @@ export default {
 
 <style lang="scss" scoped>
     .main-container {
+        position: relative;
         width: 100%;
         overflow: hidden;
     }

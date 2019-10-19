@@ -81,10 +81,11 @@ export default {
 </script>
 <style lang="scss" scoped>
     .el-header {
-        background-color: rgba(255, 255, 255, 0.377);
+        background-color: rgba(156, 141, 141, 0.349);
         position: relative;
         z-index: 999;
         padding: 0px;
+        backdrop-filter: blur(10px);
     }
     .el-main {
         padding: 0px;
