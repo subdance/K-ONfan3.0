@@ -165,7 +165,7 @@
     background-image: url('../../assets/backgrounds/1.png');
     background-repeat: repeat;
     width: 100%;
-    /* overflow: hidden; */
+    max-width: 1450px;
   }
   .imgHolder {
     padding-top: 4rem;

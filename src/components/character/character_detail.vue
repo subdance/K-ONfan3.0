@@ -530,6 +530,7 @@ export default {
     margin: auto;
   }
   .mainHolder {
+    max-width: 1450px;
     transition: 0.5s ease-in-out;
     width: 100%;
     padding-bottom: 1rem;

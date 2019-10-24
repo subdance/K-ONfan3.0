@@ -7,10 +7,10 @@
                     :key="index"
                     class="title-holder"
                     :class="{'showing-title': index == showingIndex}"
+                    @click="toggleArticle(index)"
                     >
                     <p 
                         class="title-text" 
-                        @click="toggleArticle(index)"
                         >
                         <i v-show="showingIndex == index" class="fa fa-dot-circle-o list-icon"></i>
                         <i v-show="showingIndex !== index" class="fa fa-circle-o list-icon"></i>
@@ -152,17 +152,16 @@ export default {
     }
     .title-wrapper .title-holder {
         margin-bottom: 10px;
+        cursor: pointer;
     }
     .switch-text {
         border-bottom: 1px solid #909399;
-        cursor: pointer;
         transition: 0.2s;
         color: #909399;
         font-size: 12px;
     }
-    .switch-text:hover {
+    .title-wrapper:first-child .title-holder:hover .title-text{
         color: #409EFF;
-        border-bottom: 1px solid #409EFF;
     }
     .title-text {
         font-weight: bold;
