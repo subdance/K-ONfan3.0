@@ -131,12 +131,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-    /* .el-dialog__wrapper {
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100vh;
-    } */
     * {
         box-sizing: border-box;
     }

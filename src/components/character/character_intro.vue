@@ -145,7 +145,7 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   * {
     box-sizing: border-box;
   }
@@ -179,56 +179,61 @@
     background-repeat: no-repeat;
     right: 0;
     bottom: 0;
-    width: 22rem;
-    height: 21rem;
+    width: 300px;
+    height: 300px;
     z-index: 1;
   }
   .girlNameText {
     color: #df000a;
     font-weight: bold;
-    font-size: 7rem;
+    font-size: 32px;
     text-shadow: 3px 3px 5px black;
   }
   .mainIntroHolder {
-    width: 35rem;
-    height: 40rem;
-    font-size: 2rem;
+    width: 400px;
+    height: 300px;
+    font-size: 16px;
     background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/1.gif');
     background-repeat: repeat-y;
     background-position: center;
     word-break: break-all;
     padding-top:20px;
     overflow: hidden;
-    padding-left: 2rem;
     color: #303133;
     box-shadow: 2px 2px 2px black;
+    padding-left: 32px;
+    padding-right: 32px;
   }
   .mainIntro {
-    line-height: 4rem;
-    letter-spacing: 0.8rem;
+    letter-spacing: 5px;
     font-family: 'ZCOOL KuaiLe', cursive;
-    font-size: 2.2rem;
+    font-size: 20px;
     text-shadow: 0 -0.05em 0.1em rgba(0,0,0,.3);
+    line-height: 25px;
+
+    &:first-letter {
+      margin-left: 32px;
+    }
   }
   .introTextHolder {
     padding-top: 4rem;
   }
   .girlTextHolder {
     position: absolute;
-    right: 0rem;
-    bottom: 15rem;
-    width: 25rem;
-    height:25rem;
+    right: 20px;
+    bottom: 200px;
+    width: 270px;
+    height: 270px;
     background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/element/dialog1.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    padding: 6rem 5rem 0 5rem;
-    font-size: 1.9rem;
+    font-size: 16px;
     font-style: italic;
     color: #606266;
     z-index: 2;
+    padding: 60px 40px 30px 40px;
   }
   .nameTag {
     line-height: 4rem;
@@ -256,28 +261,21 @@
   .button {
     border: 4px solid white;
     position: absolute;
-    -webkit-border-radius: 0 10px 200px / 0 200px 14px 250px;
     border-radius: 0 10px 200px / 0 200px 14px 250px;
     z-index: 1;
     cursor: pointer;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 180px;
     height: 180px;
     display:inline-block;
     padding: 30px 0 0;
     font: normal normal normal 5rem/1.3 "Gochi Hand", Helvetica, sans-serif;
-    font-size: 4rem;
+    font-size: 2rem;
     color: rgba(255,0,106,0.58);
     text-align: center;
     white-space: pre;
-    background: -webkit-repeating-linear-gradient( -90deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
-    background: -moz-repeating-linear-gradient( 180deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
     background: repeating-linear-gradient( 180deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
     background-position: 50% 50%;
-    -webkit-box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
-    box-shadow: -3px 5px 12px 0 rgba(0,0,0,0.1) ;
     box-shadow: 3px 3px 3px black;
     transition: 0.5s ease-in-out;
   }
@@ -382,15 +380,14 @@
       z-index: 999;
     }
     .girlNameText {
-      font-size: 2.5rem;
+      font-size: 32px;
     }
     .girlTextHolder {
       display: none;
     }
     .mainIntro {
-      line-height: 3rem;
-      letter-spacing: 0.4rem;
-      font-size: 1.9rem;
+      font-size: 22px;
+      letter-spacing: 5px;
     }
     .mcHolder {
       display: none;

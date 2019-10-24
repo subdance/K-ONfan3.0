@@ -6,13 +6,13 @@
         <link async href="https://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
         <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
         <link async href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+
         <aplayer
             ref='aplayer'
-            :audio="moePlayer.audio"
+            :audio="moePlayer.currentAudio"
             :volume='moePlayer.volume'
             fixed
             autoplay
-            v-show='moePlayer.isFixPlayerShow'
             />
         <el-header>
             <navbar></navbar>
@@ -39,8 +39,8 @@ export default {
     data(){
         return {
             moePlayer: {
-                isFixPlayerShow: true,
                 volume: 0.5,
+                currentAudio: [],
                 audio: [
                     {
                         name: 'わたしの恋はホッチキス/订书机之恋',
@@ -73,10 +73,61 @@ export default {
                         cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/5.jpeg',
                     },
                 ],
+                audio2: [
+                    {
+                    name: 'あの日の夢',
+                    artist: '百石元',
+                    url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/dream.mp3',
+                    cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/7.jpeg',
+                    },
+                    {
+                    name: 'Autumn breeze with you',
+                    artist: '百石元',
+                    url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/autumn.mp3',
+                    cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/1.jpeg',
+                    },
+                    {
+                    name: 'いい夢見てね',
+                    artist: '百石元',
+                    url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/sweetdream.mp3',
+                    cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/6.jpeg',
+
+                    },
+                    {
+                    name: 'Winter night in a warm room',
+                    artist: '百石元',
+                    url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/winternight.mp3',
+                    cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/5.jpeg',
+                    },
+                    {
+                    name: 'U&I 〜夕日の綺麗なあの丘で〜',
+                    artist: '百石元',
+                    url: 'https://konfan.oss-cn-beijing.aliyuncs.com/music/instui.mp3',
+                    cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/music-cover/3.jpeg',
+                    },
+                ],
             },
             
         }
     }, 
+    created() {
+        this.dispatchAplayer(this.$route);
+    },
+    watch: {
+        $route(to, from) {
+            this.dispatchAplayer(to, from);
+        }
+    },
+    methods: {
+        dispatchAplayer(to, from) {//根据当前路由分配曲目
+            if (to.name === 'blog') {
+                this.moePlayer.currentAudio = this.moePlayer.audio2;
+            }
+            else {
+                this.moePlayer.currentAudio = this.moePlayer.audio;
+            }
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
