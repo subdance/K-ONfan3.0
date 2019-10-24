@@ -516,7 +516,8 @@ export default {
     border: 5px solid #ff7c81 !important;
   }
   #addTextHolder {
-    font-size: 1.6rem;
+    padding-top: 20px;
+    font-size: 16px;
     text-align: center;
   }
   #addText {
@@ -544,8 +545,8 @@ export default {
     position: relative;
   }
   .picTd {
-    width: 15rem;
-    height: 15rem;
+    width: 200px;
+    height: 200px;
     cursor: pointer;
     background-position: center;
     background-size: cover;
@@ -557,10 +558,9 @@ export default {
   }
   .introPara {
     text-align:justify;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
     border-bottom: 1px solid #DCDFE6;
     color: #C0C4CC;
+    box-sizing: border-box;
   }
   #yui {
     background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/element/character/yui1.jpg');
@@ -626,7 +626,7 @@ export default {
   .detailTd {
     margin: 0 1rem;
     color: #F2F6FC;
-    font-size: 1.7rem;
+    font-size: 16px;
     max-width: 40rem;
     padding: 1rem 2rem;
     vertical-align: top;
@@ -662,7 +662,7 @@ export default {
     text-align: right;
   }
   .outerText {
-    font-size: 1.1rem;
+    font-size: 12px;
     color: #909399;
   }
   .altImg {
@@ -670,12 +670,12 @@ export default {
     margin-bottom: -1rem;
   }
   .tableItem th {
-    font-size: 1.6rem;
+    font-size: 16px;
     font-weight: normal;
     color: #C0C4CC;
   }
   .tableItem td {
-    font-size: 1.6rem;
+    font-size: 16px;
     font-weight: normal;
     color: #C0C4CC;
   }
@@ -732,13 +732,13 @@ export default {
       margin-bottom: 1rem;
     }
     .introPara {
-      font-size: 1.3rem;
+      font-size: 16px;
     }
     .tableItem th {
-      font-size: 1.3rem;
+      font-size: 16px;
     }
     .tableItem td {
-      font-size: 1.3rem;
+      font-size: 16px;
     }
   }
 </style>
