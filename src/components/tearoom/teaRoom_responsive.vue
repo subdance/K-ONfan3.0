@@ -31,8 +31,10 @@
                         :key="index"
                         class="paragraph"
                         :class="{'quote': quoteChecker(index)}"
+                        
                         >
-                        {{item}}
+                        <span v-if="!imgChecker(index)">{{item}}</span>
+                        <img :src=item.slice(1) v-if="imgChecker(index)" class="article-img"> 
                     </p>
                 </div>
             </transition>
@@ -104,6 +106,9 @@ export default {
     methods: {
         quoteChecker(index) {
             return this.articleInShow.para[index][0] == 'q';
+        },
+        imgChecker(index) {
+            return this.articleInShow.para[index][0] === '!';
         },
         generateStausController() {
             let controllerSum = this.article.length;
@@ -262,6 +267,15 @@ export default {
         color: transparent;
         margin-right: -10px;
     }
+    .article-img {
+        width: 300px;
+        margin: auto;
+        display: block;
+        /* border-radius: 15px; */
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: 10px solid white;
+    }
     .paragraph::first-letter {
         padding-left: 20px;
     }
@@ -280,4 +294,5 @@ export default {
         background-repeat: no-repeat;
         background-size: cover;
     }
+    
 </style>

@@ -266,10 +266,10 @@ export default {
         width: 400px;
         margin: auto;
         display: block;
-        border-radius: 15px;
+        /* border-radius: 15px; */
         margin-top: 15px;
         margin-bottom: 15px;
-        border: 4px solid white;
+        border: 10px solid white;
     }
     .paragraph::first-letter {
         padding-left: 20px;
