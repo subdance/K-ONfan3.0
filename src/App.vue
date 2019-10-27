@@ -7,14 +7,17 @@
         <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
         <link async href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
         <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" rel="stylesheet">
+        <div>
+            <aplayer
+                ref='aplayer'
+                :audio="currentAudio"
+                :volume='moePlayer.volume'
+                v-show="shouldShow"
+                :fixed="isFixed"
+                autoplay
+                />
+        </div>
 
-        <aplayer
-            ref='aplayer'
-            :audio="moePlayer.currentAudio"
-            :volume='moePlayer.volume'
-            fixed
-            autoplay
-            />
         <el-header>
             <navbar></navbar>
         </el-header>
@@ -41,7 +44,6 @@ export default {
         return {
             moePlayer: {
                 volume: 0.5,
-                currentAudio: [],
                 audio: [
                     {
                         name: 'わたしの恋はホッチキス/订书机之恋',
@@ -112,20 +114,41 @@ export default {
         }
     }, 
     created() {
-        this.dispatchAplayer(this.$route);
+    },
+    computed: {
+        currentAudio() {
+            if (this.$route.name === 'blog') {
+                return this.moePlayer.audio2
+            }
+            else {
+                return this.moePlayer.audio
+            }
+        },
+        shouldShow() {
+            if (this.$route.name == 'video') {
+                if (this.$refs.aplayer) {
+                    this.$refs.aplayer.pause();
+                }
+            }
+            return this.$route.name !== 'video'
+        },
+        isFixed() {
+            return true;
+            return this.$route.name !== 'blog'
+        }
     },
     watch: {
-        $route(to, from) {
-            this.dispatchAplayer(to, from);
-        }
+        // $route(to, from) {
+        //     this.dispatchAplayer(to, from);
+        // }
     },
     methods: {
         dispatchAplayer(to, from) {//根据当前路由分配曲目
             if (to.name === 'blog') {
-                this.moePlayer.currentAudio = this.moePlayer.audio2;
+                this.moePlayer.currentAudio = [...this.moePlayer.audio2];
             }
             else {
-                this.moePlayer.currentAudio = this.moePlayer.audio;
+                this.moePlayer.currentAudio = [...this.moePlayer.audio];
             }
         }
     }
@@ -142,6 +165,7 @@ export default {
     .el-main {
         padding: 0px;
         margin-top: -60px;
+        position: relative;
     }
     .el-footer {
         padding: 0px;

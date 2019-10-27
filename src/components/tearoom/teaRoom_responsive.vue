@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container">
+    <div class="main-container-inner">
         <div class="title-wrapper-button">
             <el-button @click="drawer = true" type="danger" plain>
                 <span style="font-family: 'ZCOOL XiaoWei', serif; font-size: 20px;">✮目录召唤✮</span>
@@ -171,9 +171,9 @@ export default {
     .list-icon {
         color: #df000a;
     }
-    .main-container {
+    .main-container-inner {
         position: relative;
-        padding-top: 20px;
+        padding-top: 40px;
         max-width: 375px;
         display: flex;
         flex-flow: column nowrap;

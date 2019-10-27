@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container">
+    <div class="main-container-inner">
         <div class="main-wrapper">
             <div class="title-wrapper">
                 <div
@@ -147,7 +147,7 @@ export default {
     .list-icon {
         color: #df000a;
     }
-    .main-container {
+    .main-container-inner {
         position: relative;
         padding-top: 40px;
     }

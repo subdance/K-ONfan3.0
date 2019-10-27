@@ -1,7 +1,7 @@
 <template>
     <div class="main-container">
-        <!-- <player /> -->
-        <player-res />
+        <player-res v-if="isSmallScreen"/>
+        <player v-else/>
     </div>
 </template>
 
@@ -14,8 +14,10 @@ export default {
         playerRes
     },
     computed: {
+        isSmallScreen() {
+            return window.innerWidth < 1200
+        }
     }
-
 }
 </script>
 
