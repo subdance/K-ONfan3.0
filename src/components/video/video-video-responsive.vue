@@ -132,7 +132,7 @@ export default {
                 padding-bottom: 10px;
                 transition: all 0.3s;
 
-                &:active {
+                &:hover, &:active {
                     background-color: rgba(255, 255, 255, 0.39);
                 }
 
@@ -145,10 +145,9 @@ export default {
                 .info-holder {
                     width: 150px;
                     color: white;
+                    padding: 10px;
                     // margin-left: 30px;
                 }
-
-
             }
         }
     }
