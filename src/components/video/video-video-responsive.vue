@@ -135,8 +135,10 @@ export default {
                 }
 
                 .poster-image {
-                    width: 150px;
+                    display: block;
                     border-radius: 10px;
+                    object-fit: contain;
+                    height: 100px;
                 }
                 .info-holder {
                     width: 150px;
