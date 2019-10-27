@@ -30,11 +30,11 @@
                         v-for="(item, index) in articleInShow.para"
                         :key="index"
                         class="paragraph"
-                        :class="{'quote': quoteChecker(index)}"
-                        
+                        :class="{'quote': _richTextChecker(index) == 'quote', 'special': _richTextChecker(index) == 'special'}"
                         >
-                        <span v-if="!imgChecker(index)">{{item}}</span>
-                        <img :src=item.slice(1) v-if="imgChecker(index)" class="article-img"> 
+                        <span v-if="!_richTextChecker(index)">{{item.slice(0, 1)}}</span>
+                        <span v-if="!_imgChecker(index)">{{item.slice(1)}}</span>
+                        <img :src=item.slice(1) v-if="_imgChecker(index)" class="article-img">
                     </p>
                 </div>
             </transition>
@@ -104,10 +104,31 @@ export default {
     computed: {
     },
     methods: {
+         _richTextChecker(index) {
+            switch (this.articleInShow.para[index][0]) {
+                case '~': {
+                    return 'quote';
+                    break;
+                }
+                case '@': {
+                    // this.$set(this.articleInShow.para, index, this.articleInShow.para[index].slice(1))
+                    return 'special';
+                    break;
+                }
+                case '!': {
+                    return 'image';
+                    break;
+                }
+                default: {
+                    return false;
+                    break;
+                }
+            }
+        },
         quoteChecker(index) {
             return this.articleInShow.para[index][0] == 'q';
         },
-        imgChecker(index) {
+        _imgChecker(index) {
             return this.articleInShow.para[index][0] === '!';
         },
         generateStausController() {
@@ -234,7 +255,8 @@ export default {
         line-height: 20px;
         font-size: 16px;
         margin-bottom: 10px;
-        font-family: 'Times New Roman', Times, serif
+        /* font-family: 'Times New Roman', Times, serif */
+        font-family: 'Noto Serif SC', serif;
     }
     .para-title {
         font-weight: bold;
@@ -259,19 +281,18 @@ export default {
         border-left: 2px solid #909399;
         padding: 10px 10px;
         padding-bottom: 15px;
-        font-family: 'Times New Roman', Times, serif;
+        /* font-family: 'Times New Roman', Times, serif; */
+        font-family: 'Noto Serif SC', serif;
         line-height: 20px;
     }
-    .quote::first-letter {
-        opacity: 0;
-        color: transparent;
-        margin-right: -10px;
+    .special {
+        font-style: italic;
+        font-weight: bold;
     }
     .article-img {
         width: 300px;
         margin: auto;
         display: block;
-        /* border-radius: 15px; */
         margin-top: 15px;
         margin-bottom: 15px;
         border: 10px solid white;

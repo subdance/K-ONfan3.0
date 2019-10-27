@@ -6,6 +6,7 @@
         <link async href="https://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
         <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
         <link async href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
+        <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" rel="stylesheet">
 
         <aplayer
             ref='aplayer'
