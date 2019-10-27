@@ -59,7 +59,7 @@
               <p class="mainIntro">{{ nowMainIntro }}</p>
             </div>
             <div class="girlTextHolder">
-              {{ nowGirlIntro }}
+              <div>{{ nowGirlIntro }}</div>
             </div>
           </div>
         </el-col>
@@ -229,11 +229,17 @@
     background-size: contain;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    z-index: 2;
+  }
+  .girlTextHolder > div {
     font-size: 16px;
     font-style: italic;
     color: #606266;
-    z-index: 2;
-    padding: 60px 40px 30px 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 22px;
   }
   .nameTag {
     line-height: 4rem;

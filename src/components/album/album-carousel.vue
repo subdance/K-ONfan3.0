@@ -188,6 +188,8 @@ export default {
 <style scoped>
     .carousel {
         max-width: 1450px;
+        margin: auto;
+        overflow: hidden;
     }
     .carouselPicCard {
         border-radius: 10px;
@@ -240,6 +242,7 @@ export default {
     .carouselPart:last-child {
         width: 95%;
         margin: auto;
+        margin-bottom: 50px;
     }
     .detailHolderOuter {
         text-align: center;
