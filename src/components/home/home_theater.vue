@@ -112,6 +112,7 @@ export default {
     }
   @media only screen and (max-width: 600px) {
     .main-container {
+        background-color: black;
         padding-top: 60px;
     }
     #box1 {

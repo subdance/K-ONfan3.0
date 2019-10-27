@@ -112,7 +112,9 @@ export default {
 <style lang="scss" scoped>
     .main-container-inner {
         width: 100%;
-        // padding-top: 30px;
+        // padding-top: 60px;
+        // background-color: black;
+
         .player {
             width: 100%;
             display: block;

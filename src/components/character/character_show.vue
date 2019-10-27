@@ -111,6 +111,7 @@
   }
   @media only screen and (max-width: 600px) {
     .tabHolder {
+      background-color: black;
       padding-top: 60px;
     }
     .bigImg {

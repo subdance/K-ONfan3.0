@@ -26,6 +26,7 @@ export default {
         width: 100%;
         position: relative;
         padding-top: 60px;
+        box-sizing: border-box;
         min-height: 100vh;
         background-image: url('https://konfan.oss-cn-beijing.aliyuncs.com/image/character-slide/5.jpg');
         background-size: cover;

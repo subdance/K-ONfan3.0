@@ -1,9 +1,13 @@
 <template lang="html">
   <div class="navHolder">
-        <div class="single-holder" v-for="item in routerList">
+        <div class="single-holder" v-for="(item, index) in routerList">
             <router-link :to=item.router>
                 <span class="navTextHome">{{item.title}}&nbsp</span>
-                <i :class="item.icon" style="color: white;"></i>
+                <i 
+                    :class="item.icon" 
+                    :style="{color: nowColor(index), transition: 'all 0.2s'}"
+                    >
+                </i>
             </router-link>
         </div>
         <div class="iconHolder">
@@ -23,31 +27,46 @@ export default {
         return {
             routerList: [
                 {
+                    index: 0,
                     title: 'HTT活动室',
                     router: '/',
                     icon: 'icon fa fa-home fa-lg'
                 },
                 {
+                    index: 1,
                     title: '部员册',
                     router: '/character',
                     icon: 'icon fa fa-address-book fa-lg'
                 },
                 {
+                    index: 2,
                     title: '茶色相簿',
                     router: '/album',
                     icon: 'icon fa fa-image fa-lg'
                 },
                 {
+                    index: 3,
                     title: '放映机',
                     router: '/video',
                     icon: 'icon fa fa-video-camera fa-lg'
                 },
                 {
+                    index: 4,
                     title: '云上茶屋',
                     router: '/blog',
                     icon: 'icon fa fa-coffee fa-lg'
                 },
             ]
+        }
+    },
+    computed: {
+        nowIndex() {
+            return this.routerList.filter(item => item.router === this.$route.path)[0].index;
+        },
+    },
+    methods: {
+        nowColor(index) {
+            return this.nowIndex == index ? '#409EFF' : 'white';
         }
     }
 }
@@ -95,16 +114,6 @@ export default {
             }
         }
     }
-    // .navHolder > div::after {
-    //     content: '';
-    //     display: block;
-    //     border-bottom: 2px solid white;
-    //     transform: scale(0);
-    //     transition: transform 250ms ease-in-out;
-    // }
-    // .navHolder > div:hover::after {
-    //     transform: scale(1);
-    // }
     img {
         height: 50px;
     }
@@ -127,7 +136,7 @@ export default {
             display: none;
         }
         .icon {
-            font-size: 2.5rem;
+            font-size: 22px;
         }
     }
 </style>
