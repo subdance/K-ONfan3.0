@@ -5,7 +5,8 @@
                 <span class="navTextHome">{{item.title}}&nbsp</span>
                 <i 
                     :class="item.icon" 
-                    :style="{color: nowColor(index), transition: 'all 0.2s'}"
+                    style="vertical-align: middle"
+                    :style="{color: nowColor(index), transition: 'all 0.2s', filter: nowShadow(index)}"
                     >
                 </i>
             </router-link>
@@ -67,6 +68,9 @@ export default {
     methods: {
         nowColor(index) {
             return this.nowIndex == index ? '#409EFF' : 'white';
+        },
+        nowShadow(index) {
+            return this.nowIndex == index ? 'drop-shadow(0 0 8px white)' : 'none' 
         }
     }
 }
@@ -93,6 +97,7 @@ export default {
         .single-holder {
             text-align: center;
             margin-right: 1.2rem;
+            transition: all 0.1s;
 
             &:nth-child(5) {
                 margin: auto;
@@ -103,9 +108,12 @@ export default {
                 color: #df000a;
                 font-family: 'ZCOOL KuaiLe', cursive;
                 transition: all 200ms ease-in-out;
+                text-shadow: 1px 1px 1px black;
             }
 
             &:hover {
+                transform: translate(0, -3px);
+                transition: all 0.2s;
 
                 .navTextHome {
                     color: red;

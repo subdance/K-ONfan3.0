@@ -4,6 +4,7 @@
 		<div class="section-container">
 			<cross></cross>
 			<people></people>
+			<img class="bottom-banner" src="https://konfan.oss-cn-beijing.aliyuncs.com/image/home/10.png" alt="">
 		</div>
 	</div>
 </template>
@@ -29,5 +30,9 @@ export default {
 		background: #ff6e7f;
         background: -webkit-linear-gradient(to bottom, #bfe9ff, #ff6e7f);
         background: linear-gradient(to bottom, #bfe9ff, #ff6e7f);
+	}
+	.bottom-banner {
+		display: block;
+		width: 100%;
 	}
 </style>

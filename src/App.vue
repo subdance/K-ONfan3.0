@@ -24,6 +24,7 @@
 
         <el-main>
             <router-view/>
+            <to-top></to-top>
         </el-main>
 
         <el-footer>
@@ -35,10 +36,12 @@
 <script>
 import navbar from "@/components/global/global_navbar.vue"
 import footbar from "@/components/global/global_footbar.vue"
+import toTop from "@/components/global/global_backToTop.vue"
 export default {
     components: {
         navbar,
-        footbar
+        footbar,
+        toTop
     },
     data(){
         return {
