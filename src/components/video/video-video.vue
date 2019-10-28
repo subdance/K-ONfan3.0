@@ -200,6 +200,7 @@
         }
     }
     .main-container-inner {
+        // padding-top: 10vh;
         position: absolute;
         max-width: 1450px;
         top: 50%;
@@ -210,7 +211,7 @@
         position: relative;
         overflow: hidden;
         text-align: center;
-        padding-top: 50px;
+        // padding-top: 20vh;
     }
     .player {
         margin: auto;

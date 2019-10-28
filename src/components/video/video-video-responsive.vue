@@ -18,7 +18,7 @@
                     :src="item.poster"
                     />
                 <div class="info-holder">
-                    <span>{{item.name}}</span><br/>
+                    <span class="name-text">{{item.name}}</span><br/>
                     <span>{{item.info}}</span>
                 </div>
             </div>
@@ -83,7 +83,7 @@ export default {
                 },
                 {
                     id: 7,
-                    name: "Unmei♪wa♪Endless!",
+                    name: "Unmei♪wa♪ Endless!",
                     info: '--剧场版 OPENING',
                     poster: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/video-cover/7.jpg',
                     src: 'https://konfan.oss-cn-beijing.aliyuncs.com/video/8.mp4',
@@ -127,6 +127,7 @@ export default {
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-around;
+                align-items: center;
                 border-bottom: 1px solid white;
                 padding-top: 10px;
                 padding-bottom: 10px;
@@ -144,9 +145,17 @@ export default {
                 }
                 .info-holder {
                     width: 150px;
-                    color: white;
                     padding: 10px;
-                    // margin-left: 30px;
+
+                    .name-text {
+                        font-size: 22px;
+                        font-family: 'Dokdo', cursive;
+                        color: white;
+                    }
+                    span {
+                        color: white;
+                        font-size: 14px;
+                    }
                 }
             }
         }
