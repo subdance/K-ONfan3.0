@@ -1,15 +1,17 @@
 <template lang="html">
   <div class="navHolder">
         <div class="single-holder" v-for="(item, index) in routerList">
-            <router-link :to=item.router>
-                <span class="navTextHome">{{item.title}}&nbsp</span>
-                <i 
-                    :class="item.icon" 
-                    style="vertical-align: middle"
-                    :style="{color: nowColor(index), transition: 'all 0.2s', filter: nowShadow(index)}"
-                    >
-                </i>
-            </router-link>
+            <div class="wrapper">
+                <router-link :to=item.router>
+                    <span class="navTextHome">{{item.title}}&nbsp</span>
+                    <i 
+                        :class="item.icon" 
+                        style="vertical-align: middle"
+                        :style="{color: nowColor(index), transition: 'all 0.2s', filter: nowShadow(index)}"
+                        >
+                    </i>
+                </router-link>
+            </div>
         </div>
         <div class="iconHolder">
             <a
@@ -99,6 +101,9 @@ export default {
             margin-right: 1.2rem;
             transition: all 0.1s;
 
+            .wrapper {
+                transition: all 0.2s;
+            }
             &:nth-child(5) {
                 margin: auto;
                 margin-right: 0px;
@@ -112,13 +117,16 @@ export default {
             }
 
             &:hover {
-                transform: translate(0, -3px);
-                transition: all 0.2s;
 
-                .navTextHome {
-                    color: red;
-                    text-shadow: 2px 2px 1px black;
+                .wrapper {
+                    transform: translate(0, -3px);
+                    transition: all 0.2s;
+
+                    .navTextHome {
+                        text-shadow: 2px 2px 1px black;
+                    }
                 }
+
             }
         }
     }
