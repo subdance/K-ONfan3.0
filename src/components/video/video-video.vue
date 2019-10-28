@@ -177,7 +177,7 @@
                     @include showingList
                 }
                 .video-name-holder {
-                    span {
+                    p {
                         opacity: 1;
                         transition: all 0.3s;
                     }
@@ -199,108 +199,24 @@
             }
         }
     }
-  .main-container-inner {
-    position: relative;
-    max-width: 1450px;
-  }
-  .videoHolder {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding-top: 50px;
-  }
-  .player {
-    margin: auto;
-    display: block;
-    border: 2px solid white;
-    outline: none;
-    width: 800px;
-  }
-  @media only screen and (max-width:600px) {
     .main-container-inner {
-      position: relative;
-      height: auto;
-      min-height: 600px;
+        position: absolute;
+        max-width: 1450px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .videoHolder {
-      padding-top: 0px;
-      position: relative;
-      min-height: 360px;
-      overflow: hidden;
-      text-align: center;
-      padding-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        padding-top: 50px;
     }
     .player {
-      position: absolute;
-      top: 60px;
-      left: 50%;
-      transform: translate(-50%, -0);
-      display: block;
-      width: 100%;
-      height: auto;
-      border: 2px solid white;
+        margin: auto;
+        display: block;
+        border: 2px solid white;
+        outline: none;
+        width: 800px;
     }
-    .listHolder {
-      width: 100%;
-      position: relative;
-      top: -5rem;
-      display: flex;
-      justify-content: space-around;
-      flex-direction: row-reverse;
-      overflow: hidden;
-      flex-wrap: wrap;
-      margin-bottom: -5rem;
-    }
-    .listBlock {
-      cursor: pointer;
-      color: white;
-      width: 50%;
-      transition: all 0.2s ease-in-out;
-      z-index: 1;
-    }
-    .listBlock:hover {
-      margin-left: 0rem;
-      color: white;
-      width: 50%;
-    }
-    .listBlock:not(:last-child) {
-      margin-left: 0;
-    }
-    .thumbnailHolder {
-      transform: skewX(0deg);
-      overflow: hidden;
-      box-shadow: 2px 2px 4px black;
-      border-radius: 10px;
-      box-sizing: border-box;
-      margin: 1rem 1rem;
-    }
-    .thumbnail {
-      width: 100%;
-      height: 13rem;
-      object-fit: cover;
-      transition: all 0.2s ease-in-out;
-      margin-bottom: -0.5rem;
-      transform: skewX(0deg) scale(1.1, 1.1);
-      border: 6px solid transparent;
-      border-radius: 10px;
-    }
-    .selectedList {
-      margin-left: 0rem;
-      color: white;
-      width: 50%;
-      transform: skewX(0deg);
-    }
-    .selected {
-      height: 13rem;
-      border-radius: 0 0 10px 10px;
-    }
-    .selectedSmall {
-      box-sizing: content-box;
-      border: 4px solid white;
-    }
-    .notSelectedSmall {
-      box-sizing: border-box;
-      border: 4px solid transparent;
-    }
-  }
 </style>

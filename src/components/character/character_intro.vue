@@ -1,4 +1,5 @@
 <template lang="html">
+<div class="background-holder">
   <div class="introHolder">
     <div class="smallScreenSelector">
       <div class="smallButton" @click='hideAndShow(1)'><span style="line-height:4rem">Yui!</span></div>
@@ -65,6 +66,7 @@
         </el-col>
       </el-row>
     </transition>
+    </div>
     </div>
 </template>
 
@@ -152,6 +154,9 @@
   #mainHolder {
     width: 100%;
   }
+  .background-holder {
+    background-image: url('../../assets/backgrounds/1.png');
+  }
   .addTextHolder {
     width: 100%;
     font-size: 1.6rem;
@@ -162,7 +167,6 @@
     position: relative;
     z-index: 1;
     margin: auto;
-    background-image: url('../../assets/backgrounds/1.png');
     background-repeat: repeat;
     width: 100%;
     max-width: 1450px;

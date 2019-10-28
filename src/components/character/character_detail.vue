@@ -1,4 +1,5 @@
 <template lang="html">
+<div class="background-holder">
   <div class="mainHolder">
     <div class="cache">
       <div class="cacheyui">
@@ -62,6 +63,7 @@
         </transition>
       </div>
     </div>
+  </div>
   </div>
 </template>
 
@@ -507,6 +509,10 @@ export default {
     margin: auto;
     width: 80%;
   }
+  .background-holder {
+    background-image: url(../../assets/backgrounds/4.png);
+
+  }
   .flexHolder {
     display: flex;
     justify-content: center;
@@ -530,11 +536,11 @@ export default {
     margin: auto;
   }
   .mainHolder {
+    margin: auto;
     max-width: 1450px;
     transition: 0.5s ease-in-out;
     width: 100%;
     padding-bottom: 1rem;
-    background-image: url(../../assets/backgrounds/4.png);
   }
   .girlList {
     display: flex;

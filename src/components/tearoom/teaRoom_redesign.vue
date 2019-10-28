@@ -149,7 +149,7 @@ export default {
     }
     .main-container-inner {
         position: relative;
-        padding-top: 40px;
+        padding-top: 10vh;
     }
     .main-wrapper {
         display: flex;
