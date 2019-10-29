@@ -140,10 +140,12 @@ export default {
             return this.$route.name !== 'blog'
         }
     },
-    watch: {
-        // $route(to, from) {
-        //     this.dispatchAplayer(to, from);
-        // }
+    mounted() {
+        let pathSet = ['home', 'character', 'blog', 'album', 'video'];
+        console.log(this.$route.name)
+        if (pathSet.indexOf(this.$route.name) < 0) {
+            this.$router.push('/')
+        }
     },
     methods: {
         dispatchAplayer(to, from) {//根据当前路由分配曲目

@@ -64,7 +64,12 @@ export default {
     },
     computed: {
         nowIndex() {
-            return this.routerList.filter(item => item.router === this.$route.path)[0].index;
+            if (this.routerList.filter(item => item.router === this.$route.path).length) {
+                return this.routerList.filter(item => item.router === this.$route.path)[0].index;
+            }
+            else {
+                return 0
+            }
         },
     },
     methods: {
