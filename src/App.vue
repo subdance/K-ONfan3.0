@@ -117,6 +117,14 @@ export default {
         }
     }, 
     created() {
+        if (window.innerWidth < 1200) {
+            setTimeout(() => {
+                this.$message({
+                    type: 'success',
+                    message: '在大屏幕浏览可以获得完整体验'
+                });
+            }, 1000)
+        }
     },
     computed: {
         currentAudio() {

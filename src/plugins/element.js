@@ -10,7 +10,8 @@ import {
     Row,
     Col,
     Drawer,
-    Dialog
+    Dialog,
+    Message,
 } from 'element-ui'
 
 Vue.use(Button);
@@ -24,4 +25,5 @@ Vue.use(Row);
 Vue.use(Col);
 Vue.use(Drawer);
 Vue.use(Dialog);
+Vue.prototype.$message = Message;
 
