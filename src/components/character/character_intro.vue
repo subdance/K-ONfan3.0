@@ -1,73 +1,78 @@
 <template lang="html">
 <div class="background-holder">
-  <div class="introHolder">
-    <div class="smallScreenSelector">
-      <div class="smallButton" @click='hideAndShow(1)'><span style="line-height:4rem">Yui!</span></div>
-      <div class="smallButton" @click='hideAndShow(2)'><span style="line-height:4rem">Ritsu!</span></div>
-      <div class="smallButton" @click='hideAndShow(3)'><span style="line-height:4rem">Mio!</span></div>
-      <div class="smallButton" @click='hideAndShow(4)'><span style="line-height:4rem">Tsumugi</span>!</div>
-      <div class="smallButton" @click='hideAndShow(5)'><span style="line-height:4rem">Azusa!</span></div>
+    <div class="introHolder">
+        <div class="smallScreenSelector">
+            <div class="smallButton" @click='hideAndShow(1)'><span style="line-height:4rem">Yui!</span></div>
+            <div class="smallButton" @click='hideAndShow(2)'><span style="line-height:4rem">Ritsu!</span></div>
+            <div class="smallButton" @click='hideAndShow(3)'><span style="line-height:4rem">Mio!</span></div>
+            <div class="smallButton" @click='hideAndShow(4)'><span style="line-height:4rem">Tsumugi</span>!</div>
+            <div class="smallButton" @click='hideAndShow(5)'><span style="line-height:4rem">Azusa!</span></div>
+        </div>
+    <div class="cachePart">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/yui1.png" alt="">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc1.png" alt="">
     </div>
     <div class="cachePart">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/yui1.png" alt="">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc1.png" alt="">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/ritsu1.png" alt="">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc2.png" alt="">
     </div>
     <div class="cachePart">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/ritsu1.png" alt="">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc2.png" alt="">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mio1.png" alt="">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc3.png" alt="">
     </div>
     <div class="cachePart">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mio1.png" alt="">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc3.png" alt="">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mugi1.png" alt="">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc4.png" alt="">
     </div>
     <div class="cachePart">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mugi1.png" alt="">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc4.png" alt="">
-    </div>
-    <div class="cachePart">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/azusa1.png" alt="">
-      <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc5.png" alt="">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/azusa1.png" alt="">
+        <img src="https://konfan.oss-cn-beijing.aliyuncs.com/image/character/mc5.png" alt="">
     </div>
 
-    <div class="button" id="button1" @click='hideAndShow(1)' >Hirasawa
-    Yui!</div>
-    <div class="button" id="button2" @click='hideAndShow(2)' >Tainaka
-    Ritsu!</div>
-    <div class="button" id="button3" @click='hideAndShow(3)' >Akiyama
-    Mio!</div>
-    <div class="button" id="button4" @click='hideAndShow(4)' >Kotobuki
-    Tsumugi!</div>
-    <div class="button" id="button5" @click='hideAndShow(5)' >Nakano
-    Azusa!</div>
+    <div class="button" id="button1" @click='hideAndShow(1)'>
+        HirasawaYui!
+    </div>
+    <div class="button" id="button2" @click='hideAndShow(2)'>
+        TainakaRitsu!
+    </div>
+    <div class="button" id="button3" @click='hideAndShow(3)'>
+        AkiyamaMio!
+    </div>
+    <div class="button" id="button4" @click='hideAndShow(4)'>
+        KotobukiTsumugi!
+    </div>
+    <div class="button" id="button5" @click='hideAndShow(5)'>
+        NakanoAzusa!
+    </div>
     <transition name="el-fade-in-linear">
-      <el-row v-show='isShow'>
-        <el-col :span="3">
-          <div id="addition" style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
-          {{ verticalText }}
-          </div>
-        </el-col>
-        <el-col :span="7">
-          <div class="imgHolder">
-            <img class="introImg" :src="nowHeadPic" alt="">
-          </div>
-        </el-col>
-        <el-col :span="14">
-          <div class="mcHolder" :style="{ backgroundImage: 'url(' + nowMcPic + ')' }">
-          </div>
-          <div class="introTextHolder">
-            <div class="mainIntroHolder">
-              <span class="girlNameText">{{ nowGirlName }}</span>
-              <p class="mainIntro">{{ nowMainIntro }}</p>
+        <el-row v-show='isShow'>
+            <el-col :span="3">
+                <div id="addition" style="word-break:break-all; width:2rem; text-align:center; margin:auto;">
+                    {{ verticalText }}
+                </div>
+            </el-col>
+            <el-col :span="7">
+                <div class="imgHolder">
+                    <img class="introImg" :src="nowHeadPic" alt="">
+                </div>
+            </el-col>
+            <el-col :span="14">
+                <div class="mcHolder" :style="{ backgroundImage: 'url(' + nowMcPic + ')' }">
+                </div>
+            <div class="introTextHolder">
+                <div class="mainIntroHolder">
+                    <span class="girlNameText">{{ nowGirlName }}</span>
+                    <p class="mainIntro">{{ nowMainIntro }}</p>
+                </div>
+                <div class="girlTextHolder">
+                    <div>{{ nowGirlIntro }}</div>
+                </div>
             </div>
-            <div class="girlTextHolder">
-              <div>{{ nowGirlIntro }}</div>
-            </div>
-          </div>
-        </el-col>
-      </el-row>
+            </el-col>
+        </el-row>
     </transition>
     </div>
-    </div>
+</div>
 </template>
 
 <script>
