@@ -181,7 +181,7 @@ export const articleData = [
     },
     {
         title: '音乐教室与乌龟鱼缸',
-        intro: 'K-on original soundtrack-19/10.27/凌晨',
+        intro: 'K-ON original soundtrack-19/10.27/凌晨',
         para: [
             '轻音中有一些我十分喜欢的原创音轨，百听不厌。',
             '!https://konfan.oss-cn-beijing.aliyuncs.com/image/article/muse.JPG',
