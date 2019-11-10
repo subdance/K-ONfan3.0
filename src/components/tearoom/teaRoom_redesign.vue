@@ -242,10 +242,9 @@ export default {
         writing-mode: vertical-rl;
     }
     .paragraph {
-        line-height: 18px;
+        line-height: 20px;
         font-size: 16px;
-        margin-bottom: 10px;
-        /* font-family: 'Times New Roman', Times, serif; */
+        margin-bottom: 12px;
         font-family: 'Noto Serif SC', serif;
         letter-spacing: 1px;
         color: #303133;
