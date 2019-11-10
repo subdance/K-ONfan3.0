@@ -257,9 +257,9 @@ export default {
         margin-bottom: 10px;
         /* font-family: 'Times New Roman', Times, serif */
         font-family: 'Noto Serif SC', serif;
+        color: #303133;
     }
     .para-title {
-        font-weight: bold;
         font-size: 30px;
         line-height: 30px;
         padding-left: 20px;
