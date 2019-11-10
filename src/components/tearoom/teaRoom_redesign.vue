@@ -246,7 +246,6 @@ export default {
         font-size: 16px;
         margin-bottom: 12px;
         font-family: 'Noto Serif SC', serif;
-        letter-spacing: 1px;
         color: #303133;
     }
     .para-title {
