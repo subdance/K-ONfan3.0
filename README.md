@@ -1,29 +1,13 @@
-# konfan3.0
+# [konfan3.0](https://konfan.net/#/)
+## What's new
+* Now based on vue-cli 3.0.
+* Full site re-constructed.
+* UI improving.
 
-## Project setup
-```
-npm install
-```
+## What's next
+* Clear those old and unfriendly codes.
+* Testing live2D and webGL.
+* Updating articles monthly, in Chinese, of course .
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
