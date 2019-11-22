@@ -1,12 +1,12 @@
 <template lang="html">
     <div class="main-container-inner">
         <div class="videoHolder">
-        <video
-            class="player"
-            :src="nowPlaying.src"
-            :poster='nowPlaying.poster'
-            controls>
-        </video>
+            <video
+                class="player"
+                :src="nowPlaying.src"
+                :poster='nowPlaying.poster'
+                controls>
+            </video>
         </div>
         <div class="video-container">
             <div 
@@ -127,7 +127,6 @@
     }
     .video-container {
         width: 100%;
-        overflow: hidden;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
@@ -143,9 +142,12 @@
                 width: 200px;
                 display: block;
                 transition: all 0.1s;
+                border: 1px solid red;
             }
             .video-name-holder {
                 text-align: center;
+                position: absolute;
+                width: 100%;
 
                 p {
                     font-family: 'Dokdo', cursive;
