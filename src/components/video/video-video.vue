@@ -142,7 +142,6 @@
                 width: 200px;
                 display: block;
                 transition: all 0.1s;
-                border: 1px solid red;
             }
             .video-name-holder {
                 text-align: center;
