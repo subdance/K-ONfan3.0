@@ -121,7 +121,8 @@ export default {
             setTimeout(() => {
                 this.$message({
                     type: 'success',
-                    message: '在大屏幕浏览可以获得完整体验'
+                    message: '在大屏幕浏览可以获得完整体验',
+                    showClose: true
                 });
             }, 1000)
         }

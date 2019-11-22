@@ -30,19 +30,19 @@
     </div>
 
     <div class="button" id="button1" @click='hideAndShow(1)'>
-        HirasawaYui!
+        Hirasawa Yui!
     </div>
     <div class="button" id="button2" @click='hideAndShow(2)'>
-        TainakaRitsu!
+        Tainaka Ritsu!
     </div>
     <div class="button" id="button3" @click='hideAndShow(3)'>
-        AkiyamaMio!
+        Akiyama Mio!
     </div>
     <div class="button" id="button4" @click='hideAndShow(4)'>
-        KotobukiTsumugi!
+        Kotobuki Tsumugi!
     </div>
     <div class="button" id="button5" @click='hideAndShow(5)'>
-        NakanoAzusa!
+        Nakano Azusa!
     </div>
     <transition name="el-fade-in-linear">
         <el-row v-show='isShow'>
@@ -288,7 +288,7 @@
     font-size: 2rem;
     color: rgba(255,0,106,0.58);
     text-align: center;
-    white-space: pre;
+    word-break: break-word;
     background: repeating-linear-gradient( 180deg, rgba(129,203,188,0.5) 0, rgba(129,203,188,0.5) 0.44%, rgba(0,0,0,0) 0.44%, rgba(0,0,0,0) 22%), rgb(252, 245, 155);
     background-position: 50% 50%;
     box-shadow: 3px 3px 3px black;
@@ -410,7 +410,6 @@
     .smallScreenSelector {
       display: flex;
       flex-wrap: nowrap;
-      padding: 0 1rem;
     }
     .smallButton {
       height: 4rem;
