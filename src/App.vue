@@ -184,5 +184,4 @@ export default {
     .el-footer {
         padding: 0px;
     }
-    
 </style>
