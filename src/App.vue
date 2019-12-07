@@ -18,16 +18,16 @@
                 />
         </div>
 
-        <el-header :style="{display: isMito}">
+        <el-header :style="{'display': isMito ? 'none' : 'block'}">
             <navbar></navbar>
         </el-header>
 
-        <el-main>
+        <el-main :style="{'margin-top': isMito ? '0px' : '-60px'}">
             <router-view/>
             <to-top></to-top>
         </el-main>
 
-        <el-footer :style="{display: isMito}">
+        <el-footer :style="{'display': isMito ? 'none' : 'block'}">
             <footbar></footbar>
         </el-footer>
     </el-container>
@@ -148,7 +148,7 @@ export default {
             return true;
         },
         isMito() {
-            return this.$route.name == 'mito' ? 'none' : 'block';
+            return this.$route.name == 'mito';
         }
     },
     mounted() {
@@ -176,17 +176,15 @@ export default {
         z-index: 999;
         padding: 0px;
         backdrop-filter: blur(10px);
-
-        &.shouldHide {
-            display: none !important;
-            background-color: transparent;
-            backdrop-filter: blur(0px);
-        }
     }
     .el-main {
         padding: 0px;
         margin-top: -60px;
         position: relative;
+
+        &.mito {
+            margin-top: 0px;
+        }
     }
     .el-footer {
         padding: 0px;

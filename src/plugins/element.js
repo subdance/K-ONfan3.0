@@ -25,5 +25,6 @@ Vue.use(Row);
 Vue.use(Col);
 Vue.use(Drawer);
 Vue.use(Dialog);
+
 Vue.prototype.$message = Message;
 
