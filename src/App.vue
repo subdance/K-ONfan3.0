@@ -18,7 +18,7 @@
                 />
         </div>
 
-        <el-header>
+        <el-header :style="{display: isMito}">
             <navbar></navbar>
         </el-header>
 
@@ -27,7 +27,7 @@
             <to-top></to-top>
         </el-main>
 
-        <el-footer>
+        <el-footer :style="{display: isMito}">
             <footbar></footbar>
         </el-footer>
     </el-container>
@@ -146,12 +146,13 @@ export default {
         },
         isFixed() {
             return true;
-            return this.$route.name !== 'blog'
+        },
+        isMito() {
+            return this.$route.name == 'mito' ? 'none' : 'block';
         }
     },
     mounted() {
-        let pathSet = ['home', 'character', 'blog', 'album', 'video'];
-        console.log(this.$route.name)
+        let pathSet = ['home', 'character', 'blog', 'album', 'video', 'mito'];
         if (pathSet.indexOf(this.$route.name) < 0) {
             this.$router.push('/')
         }
@@ -175,6 +176,12 @@ export default {
         z-index: 999;
         padding: 0px;
         backdrop-filter: blur(10px);
+
+        &.shouldHide {
+            display: none !important;
+            background-color: transparent;
+            backdrop-filter: blur(0px);
+        }
     }
     .el-main {
         padding: 0px;

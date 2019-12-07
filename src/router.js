@@ -5,6 +5,7 @@ import Charcter from './views/Character.vue'
 import TeaRoom from './views/TeaRoom.vue'
 import Video from './views/Video.vue'
 import Album from './views/Album.vue'
+import Mito from './views/Mito.vue'
 
 
 Vue.use(Router)
@@ -35,6 +36,11 @@ export default new Router({
 			path: '/video',
 			name: 'video',
 			component: Video
+		},
+		{
+			path: '/mito',
+			name: 'mito',
+			component: Mito
 		}
 	]
 })
