@@ -53,5 +53,49 @@ export const grass = {
         '十年之后，我想留在人们的记忆之中；百年之后，我想将名字刻在历史之中',
         '谄媚是冤大头，被ban了才对头，在虚拟主播界降下一枚核弹头',
         '一上来就被问到这种问题的工作，我想只有虚拟youtuber或者av女优了吧'
+    ],
+    bangumiList: [
+        {
+            des: '解救同班同学的模版案例',
+            name: '与精神异常者进行同化的委员长',
+            cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover1.webp',
+            link: 'https://www.bilibili.com/video/av44458339?t=293'
+        },
+        {
+            des: '努力max生草max的委员长',
+            name: '投票选出真美兔吧',
+            cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover2.webp',
+            link: 'https://www.bilibili.com/video/av57536002'
+        },
+        {
+            des: '全面futa不可避',
+            name: '为什么我的同人志那么多〇〇的',
+            cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover4.webp',
+            link: 'https://www.bilibili.com/video/av40461343?t=180'
+        },
+        {
+            des: '传说的开始',
+            name: '原点回帰！重看第一次生放送！',
+            cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover6.webp',
+            link: 'https://www.bilibili.com/video/av33777673'
+        },
+        {
+            des: '公款吃喝',
+            name: '人生第一次去了国外的感想【in 上海】',
+            cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover5.webp',
+            link: 'https://www.bilibili.com/video/av64959822'
+        },
+        {
+            des: '这种艺术形式对人类来说，为时尚早',
+            name: '超混沌3D化',
+            cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover3.webp',
+            link: 'https://www.bilibili.com/video/av48041676'
+        },
+        {
+            des: '给我贴',
+            name: '【月之美兔x樋口枫】青春之旅',
+            cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover7.webp',
+            link: 'https://www.bilibili.com/video/av68672871'
+        },
     ]
 }

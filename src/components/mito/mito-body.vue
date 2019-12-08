@@ -46,7 +46,7 @@ export default {
         height: 700px;
         bottom: 0px;
         left: 50%;
-        transform: translate(-50%, 50%) scale(2);
+        transform: translate(-50%, 80%) scale(3);
 
         &.phase2 {
             animation: move 1s ease-in-out;
@@ -58,7 +58,7 @@ export default {
                 from {
                     bottom: 0px;
                     left: 50%;
-                    transform: translate(-50%, 50%) scale(2);
+                    transform: translate(-50%, 80%) scale(3);
                 }
                 to {
                     bottom: 0px;

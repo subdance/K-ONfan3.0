@@ -4,12 +4,13 @@
             :lines="lines"
             v-if="hasPassedAll"
             ></mito-body>
-        <question 
+        <!-- <question 
             :question="this.questions[this.currentQuestionIndex]"
             @pass-question="passQuestion"
             v-if="!hasPassedAll"
             >
-        </question>
+        </question> -->
+        <bangumiList></bangumiList>
         <slogan 
             :slogan='slogan'
             v-if="hasPassedAll"
@@ -23,11 +24,13 @@ import {grass} from '@/components/mito/grass.js'
 import mitoBody from '@/components/mito/mito-body.vue'
 import question from '@/components/mito/question.vue'
 import slogan from '@/components/mito/slogan.vue'
+import bangumiList from '@/components/mito/list.vue'
 export default {
     components: {
         mitoBody,
         question,
-        slogan
+        slogan,
+        bangumiList
     },
     data() {
         return {

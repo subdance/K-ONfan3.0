@@ -87,22 +87,24 @@ export default {
 
         &.shit-anwser {
             animation: shaking 200ms infinite ease-in-out;
+            pointer-events: none;
 
             @keyframes shaking {
                 25% {
-                    transform: rotate(-10deg) translate(-50%, -50%);
+                    transform: translate(-30%, -50%);
                 }
                 75% {
-                    transform: rotate(10deg) translate(-50%, -50%);
+                    transform: translate(-70%, -50%);
                 }
                 100% {
-                    transform: rotate(0deg) translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
                 }
             }
         }
         &.correct {
             opacity: 0;
             transition: all 300ms;
+            pointer-events: none;
         }
         .content-wrapper {
 
