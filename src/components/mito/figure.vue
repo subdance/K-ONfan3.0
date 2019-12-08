@@ -44,7 +44,7 @@ export default {
     .figure-holder {
         width: 250px;
         height: 653px;
-        border: 1px solid red;
+        // border: 1px solid red;
 
         .figure-img {
             width: 100%;

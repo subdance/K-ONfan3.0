@@ -54,10 +54,16 @@ export default {
 <style lang="scss" scoped>
     .bubble-holder {
         position: absolute;
-        width: 200px;
-        height: 100px;
-        border: 1px solid red;
-        top: 200px;
+        background-color: rgba(239, 137, 169, 1);
+        border-radius: 40px;
+        padding: 20px 20px;
+        top: 50px;
         left: 200px;
+
+        span {
+            color: white;
+            font-size: 16px;
+            font-family: 'ZCOOL KuaiLe', cursive;
+        }
     }
 </style>

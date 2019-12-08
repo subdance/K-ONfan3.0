@@ -1,27 +1,31 @@
 <template>
     <div class="main-container">
-        <bubble :lines="lines"></bubble>
-        <figureHolder></figureHolder>
+        <mito-body
+            :lines="lines"
+            v-if="hasPassedAll"
+            ></mito-body>
         <question 
             :question="this.questions[this.currentQuestionIndex]"
             @pass-question="passQuestion"
             v-if="!hasPassedAll"
             >
         </question>
-        <slogan :slogan='slogan'></slogan>
+        <slogan 
+            :slogan='slogan'
+            v-if="hasPassedAll"
+            >
+        </slogan>
     </div>
 </template>
 
 <script>
-import { grass } from '@/components/mito/grass.js'
-import bubble from '@/components/mito/bubble.vue'
-import figureHolder from '@/components/mito/figure.vue'
+import {grass} from '@/components/mito/grass.js'
+import mitoBody from '@/components/mito/mito-body.vue'
 import question from '@/components/mito/question.vue'
 import slogan from '@/components/mito/slogan.vue'
 export default {
     components: {
-        bubble,
-        figureHolder,
+        mitoBody,
         question,
         slogan
     },
@@ -59,7 +63,6 @@ export default {
         box-sizing: border-box;
         width: 100vw;
         height: 100vh;
-        border: 1px solid red;
         position: relative;
         background-color: rgba(44, 45, 61, 1);
     }

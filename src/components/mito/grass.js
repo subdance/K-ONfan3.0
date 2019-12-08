@@ -1,11 +1,7 @@
 export const grass = {
     lines: [
-        'aaa',
-        'bbb',
-        'ccc',
-        'ddd',
-        'eee',
-        'fff'
+        '立正，起立！大家好我是月之美兔～',
+        '今天的我，够清楚吗？',
     ],
     questions: [
         {
