@@ -20,6 +20,9 @@
             >
         </slogan>
         <p class="info" @click="toHome">这个网站的本体其实是...</p>
+        <div class="reminder" v-if="isSmall">
+            喂喂，屏幕太小了，请换一个大点的哦。
+        </div>
     </div>
 </template>
 
@@ -47,6 +50,9 @@ export default {
     computed: {
         hasPassedAll() {
             return this.currentQuestionIndex == this.questions.length;
+        },
+        isSmall() {
+            return window.innerWidth < 1200 
         }
     },
     created() {
@@ -75,6 +81,7 @@ export default {
         height: 100vh;
         position: relative;
         background-color: rgba(44, 45, 61, 1);
+        overflow: hidden;
 
         .info {
             position: absolute;
@@ -84,6 +91,18 @@ export default {
             font-size: 12px;
             padding-right: 10px;
             cursor: pointer;
+        }
+        .reminder {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(44, 45, 61, 1);
+            z-index: 999;
+            color: white;
+            line-height: 100vh;
+            text-align: center;
         }
     }
 </style>

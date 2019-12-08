@@ -46,13 +46,14 @@ export const grass = {
         }
     ],
     slogan: [
-        '这，就是虚拟youtuber啊',
-        '全员都给我起立，到点儿了！',
-        '我们啊，可是用灵魂在身体力行啊！',
-        '如果你此刻在追逐着梦想，就说明现实也在追逐者你。因此，一刻都不要停下来啊！',
-        '十年之后，我想留在人们的记忆之中；百年之后，我想将名字刻在历史之中',
-        '谄媚是冤大头，被ban了才对头，在虚拟主播界降下一枚核弹头',
-        '一上来就被问到这种问题的工作，我想只有虚拟youtuber或者av女优了吧'
+        '“这，就是虚拟youtuber啊”',
+        '“全员都给我起立，到点儿了！”',
+        '“我们啊，可是用灵魂在身体力行啊！”',
+        '“如果你此刻在追逐着梦想，就说明现实也在追逐者你。因此，一刻都不要停下来啊！”',
+        '“十年之后，我想留在人们的记忆之中；百年之后，我想将名字刻在历史之中”',
+        '“谄媚是冤大头，被ban了才对头，在虚拟主播界降下一枚核弹头”',
+        '“一上来就被问到这种问题的工作，我想只有虚拟youtuber或者av女优了吧”',
+        '“I PlAY TENNIS”'
     ],
     bangumiList: [
         {
@@ -96,6 +97,12 @@ export const grass = {
             name: '【月之美兔x樋口枫】青春之旅',
             cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover7.webp',
             link: 'https://www.bilibili.com/video/av68672871'
+        },
+        {
+            des: '“女性一个人来店的八年来你是头一个”',
+            name: '英才教育月美兎',
+            cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover8.webp',
+            link: 'https://www.bilibili.com/video/av44724404/'
         },
     ],
     uploader: [
