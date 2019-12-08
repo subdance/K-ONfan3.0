@@ -1,15 +1,28 @@
 <template>
-    <div class="list-holder">
-        <div class="single-bangumi" v-for="(item, index) in list" :key="index">
-            <div class="img-holder">
-                <a :href="item.link" target="_blank"><img :src="item.cover" alt=""></a>
+    <transition name="el-zoom-in-top">
+        <div class="main-wrapper" v-if="shouldShow">
+            <div class="list-holder" >
+                <div class="single-bangumi" v-for="(item, index) in list" :key="index">
+                    <div class="img-holder">
+                        <a :href="item.link" target="_blank"><img :src="item.cover" alt=""></a>
+                    </div>
+                    <div class="content-holder">
+                        <a :href="item.link">{{item.name}}</a>
+                        <span>{{item.des}}</span>
+                    </div>
+                </div>
             </div>
-            <div class="content-holder">
-                <a :href="item.link">{{item.name}}</a>
-                <span>{{item.des}}</span>
+            <div class="uploader-holder">
+                <div v-for="(item, index) in uploader" :key="index" class="single-uploader">
+                    <a :href="item.link" target="_blank">
+                        <img :src="item.avatar" alt="">
+                        <p>{{item.name}}</p>
+                        <p>{{item.des}}</p>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>
@@ -17,7 +30,9 @@ import {grass} from '@/components/mito/grass.js'
 export default {
     data() {
         return {
-            list: []
+            list: [],
+            uploader: [],
+            shouldShow: false
         }
     },
     created() {
@@ -25,22 +40,34 @@ export default {
     },
     methods: {
         init() {
-            this.list = grass.bangumiList
+            this.list = grass.bangumiList;
+            this.uploader = grass.uploader;
+            setTimeout(() => {
+                this.shouldShow = true;
+            }, 4000)
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-    .list-holder {
+    .main-wrapper {
         position: absolute;
+        transform: translate(-50%, 0px);
+        top: 0px;
         left: 50%;
-        top: 100px;
-        transform: translate(-50%, 0);
+        width: 900px;
+        height: 100vh;
+
+    }
+    .list-holder {
+        margin: auto;
+        margin-top: 40px;
         width: 600px;
         height: 550px;
         overflow: scroll;
-
+        margin-bottom: 20px;
+        
         .single-bangumi {
             display: flex;
             flex-flow: row nowrap;
@@ -75,10 +102,48 @@ export default {
                     font-weight: bold;
                 }
                 span {
-                    color: white;
+                    color: rgb(107, 103, 103);
                     font-size: 16px;
                 }
             }
         }
+    }
+    .uploader-holder {
+        display: flex;
+        flex-flow: row nowrap;
+        padding-left: 20px;
+        justify-content: flex-end;
+
+        .single-uploader {
+            flex: 0 0 150px;
+
+            a {
+                text-decoration: none;
+
+                img {
+                    width: 60px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 1px solid white;
+                }
+                p {
+                    margin: 0px;
+                    color: white;
+                    text-align: left;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 20px;
+
+                    &:last-of-type {
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: grey;
+                    }
+                }
+            }
+
+        }
+
     }
 </style>

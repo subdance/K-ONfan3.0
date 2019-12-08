@@ -4,18 +4,22 @@
             :lines="lines"
             v-if="hasPassedAll"
             ></mito-body>
-        <!-- <question 
+        <question 
             :question="this.questions[this.currentQuestionIndex]"
             @pass-question="passQuestion"
             v-if="!hasPassedAll"
             >
-        </question> -->
-        <bangumiList></bangumiList>
+        </question>
+        <bangumiList
+            v-if="hasPassedAll"
+            >
+        </bangumiList>
         <slogan 
             :slogan='slogan'
             v-if="hasPassedAll"
             >
         </slogan>
+        <p class="info" @click="toHome">这个网站的本体其实是...</p>
     </div>
 </template>
 
@@ -56,6 +60,9 @@ export default {
         },
         passQuestion() {
             this.currentQuestionIndex = this.currentQuestionIndex + 1;
+        },
+        toHome() {
+            this.$router.push('/')
         }
     }
 }
@@ -68,5 +75,15 @@ export default {
         height: 100vh;
         position: relative;
         background-color: rgba(44, 45, 61, 1);
+
+        .info {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            color: grey;
+            font-size: 12px;
+            padding-right: 10px;
+            cursor: pointer;
+        }
     }
 </style>

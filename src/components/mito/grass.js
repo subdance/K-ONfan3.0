@@ -9,7 +9,7 @@ export const grass = {
             options: [
                 '16岁',
                 '15岁',
-                '波动',
+                '波动分布',
                 '16岁（二周目）'
             ],
             anwserIndex: 3
@@ -37,12 +37,12 @@ export const grass = {
         {
             title: '4.果然呢，在观众朋友当中，愁眉苦脸看着屏幕的人，那是肯定会有。即便如此，他们所荒废掉的人生，迄今为止所有的负面情绪，就由我来挡住',
             options: [
-                '美兔suki',
-                '美兔suki',
-                '美兔suki',
-                '美兔suki'
+                '美兔suki美兔suki美兔suki',
+                '美兔suki美兔suki美兔suki',
+                '美兔suki美兔suki美兔suki',
+                '美兔suki美兔suki美兔suki'
             ],
-            anwserIndex: 3
+            anwserIndex: 4
         }
     ],
     slogan: [
@@ -97,5 +97,25 @@ export const grass = {
             cover: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/cover7.webp',
             link: 'https://www.bilibili.com/video/av68672871'
         },
+    ],
+    uploader: [
+        {
+            name: '月ノ美兎',
+            des: '月之美兔官方频道',
+            link: 'https://www.youtube.com/channel/UCD-miitqNY3nyukJ4Fnf4_A',
+            avatar: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/up-mito.jpg'
+        },
+        {
+            name: '委员长杂鱼搬运',
+            des: '认真烤肉，超帅的',
+            link: 'https://space.bilibili.com/109891?spm_id_from=333.788.b_765f7570696e666f.1',
+            avatar: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/up-bili.jpg'
+        },
+        {
+            name: 'yuiYuan',
+            des: '这个小站的作者哦',
+            link: 'https://space.bilibili.com/31986715?spm_id_from=333.788.b_62696c692d6865616465722d6d.16',
+            avatar: 'https://konfan.oss-cn-beijing.aliyuncs.com/image/mito/main-mito/yuiYuan.jpg'
+        }
     ]
 }

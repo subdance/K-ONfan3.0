@@ -53,7 +53,7 @@ export default {
     },
     methods: {
         submit(index) {
-            if (index == this.question.anwserIndex) {
+            if (index == this.question.anwserIndex || this.question.anwserIndex == 4) {
                 this.hasPassed = true;
                 setTimeout(() => {
                     this.hasPassed = false;
@@ -86,7 +86,7 @@ export default {
         box-shadow: 0px 0px 10px white;
 
         &.shit-anwser {
-            animation: shaking 200ms infinite ease-in-out;
+            animation: shaking 100ms infinite ease-in-out;
             pointer-events: none;
 
             @keyframes shaking {

@@ -64,7 +64,7 @@ export default {
     .slogan-holder {
         position: absolute;
         right: 20px;
-        top: 0px;
+        top: 20px;
         writing-mode: vertical-rl;
         letter-spacing: 3px;
         max-height: 600px;
@@ -81,7 +81,7 @@ export default {
                 width: 20px;
                 height: 20px;
                 background-color: white;
-                animation: shining 700ms infinite ease-in-out;
+                animation: shining 1000ms infinite ease-in-out;
                 @keyframes shining {
                     0% {
                         opacity: 1;
