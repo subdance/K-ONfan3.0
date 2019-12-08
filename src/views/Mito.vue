@@ -8,6 +8,7 @@
             v-if="!hasPassedAll"
             >
         </question>
+        <slogan :slogan='slogan'></slogan>
     </div>
 </template>
 
@@ -16,17 +17,20 @@ import { grass } from '@/components/mito/grass.js'
 import bubble from '@/components/mito/bubble.vue'
 import figureHolder from '@/components/mito/figure.vue'
 import question from '@/components/mito/question.vue'
+import slogan from '@/components/mito/slogan.vue'
 export default {
     components: {
         bubble,
         figureHolder,
-        question
+        question,
+        slogan
     },
     data() {
         return {
             currentQuestionIndex: 0,
             questions: null,
-            lines: null
+            lines: null,
+            slogan: null
         }
     },
     computed: {
@@ -41,6 +45,7 @@ export default {
         initData() {
             this.questions = grass.questions;
             this.lines = grass.lines;
+            this.slogan = grass.slogan;
         },
         passQuestion() {
             this.currentQuestionIndex = this.currentQuestionIndex + 1;

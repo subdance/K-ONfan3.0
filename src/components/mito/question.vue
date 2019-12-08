@@ -58,7 +58,7 @@ export default {
                 setTimeout(() => {
                     this.hasPassed = false;
                     this.$emit('pass-question');
-                }, 1000)
+                }, 600)
             }
             else {
                 this.triggerWrong();
@@ -102,7 +102,7 @@ export default {
         }
         &.correct {
             opacity: 0;
-            transition: all 800ms;
+            transition: all 300ms;
         }
         .content-wrapper {
 
@@ -113,6 +113,7 @@ export default {
                 font-family: 'ZCOOL KuaiLe', cursive;
                 font-size: 22px;
                 letter-spacing: 2px;
+                color: rgba(60, 61, 76, 1)
             }
 
             .option-holder {
