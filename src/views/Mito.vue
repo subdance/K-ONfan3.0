@@ -56,5 +56,6 @@ export default {
         height: 100vh;
         border: 1px solid red;
         position: relative;
+        background-color: rgba(44, 45, 61, 1);
     }
 </style>

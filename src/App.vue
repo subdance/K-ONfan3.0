@@ -1,12 +1,5 @@
 <template>
     <el-container>
-        <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
-        <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC|ZCOOL+XiaoWei" rel="stylesheet">
-        <link async href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Merienda+One" rel="stylesheet">
-        <link async href="https://fonts.googleapis.com/css?family=Gochi%20Hand" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
-        <link async href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
-        <link async href="https://fonts.googleapis.com/css?family=Dokdo" rel="stylesheet">
-        <link async href="https://fonts.googleapis.com/css?family=Noto+Serif+SC&display=swap" rel="stylesheet">
         <div>
             <aplayer
                 ref='aplayer'
@@ -14,7 +7,8 @@
                 :volume='moePlayer.volume'
                 v-show="shouldShow"
                 :fixed="isFixed"
-                autoplay
+                :autoplay="false"
+                v-if="!isMito"
                 />
         </div>
 

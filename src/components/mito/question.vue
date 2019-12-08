@@ -1,33 +1,27 @@
 <template>
     <div 
         class="question-holder " 
-        :class="{'shit-anwser': isWrong}"
+        :class="{'shit-anwser': isWrong, 'correct': hasPassed}"
         >
-        <transition name="drop">
-            <div 
-                class="content-wrapper"
-                v-show="!hasPassed"
-                >
-                <p>
-                    {{question.title}}
-                </p>
-                <div class="option-holder">
-                    <div
-                        v-for="(item, index) in question.options"
-                        :key="index"
-                        @click="submit(index)"
-                        class="single-option-holder"
-                        >
-                        <i 
-                            class="fa fa-circle-o" 
-                            :class="{'fa-circle' : hasPassed && index == question.anwserIndex}"
-                            >
-                        </i>
-                        {{item}}
-                    </div>
+        <div 
+            class="content-wrapper"
+            >
+            <p class="title-holder">
+                {{question.title}}
+            </p>
+            <div class="option-holder">
+                <div
+                    v-for="(item, index) in question.options"
+                    :key="index"
+                    @click="submit(index)"
+                    class="single-option-holder"
+                    >
+                    <i class="fa fa-circle-o"></i>
+                    <i class="fa fa-circle"></i>
+                    {{item}}
                 </div>
             </div>
-        </transition>
+        </div>
     </div>
 </template>
 
@@ -64,7 +58,7 @@ export default {
                 setTimeout(() => {
                     this.hasPassed = false;
                     this.$emit('pass-question');
-                }, 500)
+                }, 1000)
             }
             else {
                 this.triggerWrong();
@@ -74,7 +68,7 @@ export default {
             this.isWrong = true;
             setTimeout(() => {
                 this.isWrong = false;
-            }, 500)
+            }, 200)
         }
     }
 }
@@ -86,10 +80,10 @@ export default {
         top:50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        border: 1px solid red;
-        height: 300px;
-        width: 600px;
-        background-color: aqua;
+        background-color: rgba(239, 137, 169, 1);
+        padding: 20px 40px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px white;
 
         &.shit-anwser {
             animation: shaking 200ms infinite ease-in-out;
@@ -106,37 +100,47 @@ export default {
                 }
             }
         }
+        &.correct {
+            opacity: 0;
+            transition: all 800ms;
+        }
         .content-wrapper {
+
+            .title-holder {
+                margin: 0px;
+                text-align: left;
+                line-height: 40px;
+                font-family: 'ZCOOL KuaiLe', cursive;
+                font-size: 22px;
+                letter-spacing: 2px;
+            }
 
             .option-holder {
                 display: flex;
-                border: 1px solid red;
+                flex-flow: column nowrap;
                 justify-content: space-around;
 
                 .single-option-holder {
                     cursor: pointer;
+                    font-family: 'ZCOOL KuaiLe', cursive;
+                    color: rgba(253, 253, 254, 1);
+                    line-height: 30px;
+                    font-size: 18px;
+
+                    i:last-of-type {
+                        display: none;
+                    }
+
+                    &:hover {
+                        i:first-of-type {
+                            display: none;
+                        }
+                        i:last-of-type {
+                            display: inline-block;
+                        }
+                    }
                 }
             }
         }
-    }
-    // transition css 
-    .drop-enter-active, .drop-leave-active {
-        transition: all 500ms;
-    }
-    .drop-enter {
-        opacity: 0;
-        transform: rotate(360deg) scale(0.2);
-    }
-    .drop-enter-to {
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-    }
-    .drop-leave {
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-    }
-    .drop-leave-to {
-        opacity: 0;
-        transform: rotate(360deg) scale(0.2);
     }
 </style>
