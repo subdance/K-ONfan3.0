@@ -55,14 +55,20 @@ export default {
     .bubble-holder {
         position: absolute;
         background-color: rgba(239, 137, 169, 1);
-        border-radius: 40px;
-        padding: 20px 20px;
-        top: 50px;
-        left: 200px;
+        border-radius: 3px;
+        border-bottom-left-radius: 3px;
+        top: 20px;
+        left: 160px;
+        box-shadow: 1px 1px 2px black;
+        z-index: 999;
+        line-height: 16px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        min-width: 100px;
 
         span {
             color: white;
-            font-size: 16px;
+            font-size: 12px;
             font-family: 'ZCOOL KuaiLe', cursive;
         }
     }

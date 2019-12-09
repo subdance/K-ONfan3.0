@@ -52,7 +52,7 @@ export default {
             animation: move 1s ease-in-out;
             bottom: 0px;
             left: 0;
-            transform: translate(0, 0) scale(1);
+            transform: translate(20%, 70%) scale(2.2);
 
             @keyframes move {
                 from {
@@ -63,7 +63,7 @@ export default {
                 to {
                     bottom: 0px;
                     left: 0;
-                    transform: translate(0, 0) scale(1);
+                    transform: translate(20%, 70%) scale(2.2);
                 }
             }
         }

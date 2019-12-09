@@ -68,13 +68,12 @@ export default {
         writing-mode: vertical-rl;
         letter-spacing: 3px;
         max-height: 600px;
-        // border: 1px solid red;
+        line-height: 50px;
         
         span {
             color: white;
-            font-size: 35px;
-            font-family: 'Ma Shan Zheng', cursive;
-            font-family: 'ZCOOL XiaoWei', serif;
+            font-size: 30px;
+            // font-family: 'ZCOOL XiaoWei', serif;
 
             &:last-of-type {
                 display: inline-block;

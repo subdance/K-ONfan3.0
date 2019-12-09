@@ -1,27 +1,30 @@
 <template>
     <div class="main-container">
-        <mito-body
-            :lines="lines"
-            v-if="hasPassedAll"
-            ></mito-body>
-        <question 
-            :question="this.questions[this.currentQuestionIndex]"
-            @pass-question="passQuestion"
-            v-if="!hasPassedAll"
-            >
-        </question>
-        <bangumiList
-            v-if="hasPassedAll"
-            >
-        </bangumiList>
-        <slogan 
-            :slogan='slogan'
-            v-if="hasPassedAll"
-            >
-        </slogan>
-        <p class="info" @click="toHome">这个网站的本体其实是...</p>
-        <div class="reminder" v-if="isSmall">
-            喂喂，屏幕太小了，请换一个大点的哦。
+        <div class="wrapper">
+            <mito-body
+                :lines="lines"
+                v-if="hasPassedAll"
+                ></mito-body>
+            <question 
+                :question="this.questions[this.currentQuestionIndex]"
+                @pass-question="passQuestion"
+                v-if="!hasPassedAll"
+                >
+            </question>
+            <bangumiList
+                v-if="hasPassedAll"
+                >
+            </bangumiList>
+            <slogan 
+                :slogan='slogan'
+                v-if="hasPassedAll"
+                >
+            </slogan>
+            <intro v-if="hasPassedAll"></intro>
+            <p class="info" @click="toHome">这个网站的本体其实是...</p>
+            <div class="reminder" v-if="isSmall">
+                喂喂，屏幕太小了，请换一个大点的哦。
+            </div>
         </div>
     </div>
 </template>
@@ -32,12 +35,14 @@ import mitoBody from '@/components/mito/mito-body.vue'
 import question from '@/components/mito/question.vue'
 import slogan from '@/components/mito/slogan.vue'
 import bangumiList from '@/components/mito/list.vue'
+import intro from '@/components/mito/intro.vue'
 export default {
     components: {
         mitoBody,
         question,
         slogan,
-        bangumiList
+        bangumiList,
+        intro
     },
     data() {
         return {
@@ -77,32 +82,43 @@ export default {
 <style lang="scss" scoped>
     .main-container {
         box-sizing: border-box;
-        width: 100vw;
+        width: 1440px;
         height: 100vh;
+        min-height: 700px;
         position: relative;
         background-color: rgba(44, 45, 61, 1);
         overflow: hidden;
 
-        .info {
-            position: absolute;
-            bottom: 0px;
-            right: 0px;
-            color: grey;
-            font-size: 12px;
-            padding-right: 10px;
-            cursor: pointer;
-        }
-        .reminder {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            width: 100vw;
-            height: 100vh;
-            background-color: rgba(44, 45, 61, 1);
-            z-index: 999;
-            color: white;
-            line-height: 100vh;
-            text-align: center;
+        .wrapper {
+            width: 1440px;
+            height: 900px;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+
+            .info {
+                position: absolute;
+                bottom: 20px;
+                right: 0px;
+                color: grey;
+                font-size: 12px;
+                padding-right: 10px;
+                cursor: pointer;
+                line-height: 14px;
+                margin: 0px;
+            }
+            .reminder {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100vw;
+                height: 100vh;
+                background-color: rgba(44, 45, 61, 1);
+                z-index: 999;
+                color: white;
+                line-height: 100vh;
+                text-align: center;
+            }
         }
     }
 </style>

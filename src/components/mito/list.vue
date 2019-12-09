@@ -53,97 +53,104 @@ export default {
 <style lang="scss" scoped>
     .main-wrapper {
         position: absolute;
-        transform: translate(-50%, 0px);
         top: 0px;
-        left: 50%;
-        width: 900px;
+        left: 300px;
         height: 100vh;
-
-    }
-    .list-holder {
-        margin: auto;
-        margin-top: 40px;
+        max-height: 900px;
         width: 600px;
-        height: 550px;
-        overflow: scroll;
-        margin-bottom: 20px;
-        
-        .single-bangumi {
-            display: flex;
-            flex-flow: row nowrap;
-            width: 100%;
-
-            &:not(:first-of-type) {
-                margin-top: 10px;
-            }
-
-            .img-holder {
-                flex: 0 0 200px;
-                border: 1px solid white;
-                border-radius: 4px;
-
-                img {
-                    width: 100%;
-                    display: block;
-                } 
-            }
-            .content-holder {
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: center;
-                padding-left: 20px;
-                padding-right: 20px;
-                flex-grow: 2;
-
-                a {
-                    color: rgba(239, 137, 169, 1);
-                    font-size: 18px;
-                    text-decoration: underline;
-                    font-weight: bold;
-                }
-                span {
-                    color: rgb(107, 103, 103);
-                    font-size: 16px;
-                }
-            }
-        }
-    }
-    .uploader-holder {
         display: flex;
-        flex-flow: row nowrap;
-        padding-left: 20px;
-        justify-content: flex-end;
+        flex-flow: column nowrap;
+        padding-bottom: 20px;
+        box-sizing: border-box;
 
-        .single-uploader {
-            flex: 0 0 150px;
+        .list-holder {
+            margin: auto;
+            margin-top: 20px;
+            width: 100%;
+            height: 600px;
+            overflow: scroll;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            
+            .single-bangumi {
+                display: flex;
+                flex-flow: row nowrap;
+                width: 100%;
 
-            a {
-                text-decoration: none;
-
-                img {
-                    width: 60px;
-                    border-radius: 50%;
-                    overflow: hidden;
-                    border: 1px solid white;
+                &:not(:first-of-type) {
+                    margin-top: 10px;
                 }
-                p {
-                    margin: 0px;
-                    color: white;
-                    text-align: left;
-                    font-weight: bold;
-                    font-size: 16px;
-                    line-height: 20px;
 
-                    &:last-of-type {
-                        font-weight: normal;
-                        font-size: 12px;
-                        line-height: 14px;
-                        color: grey;
+                .img-holder {
+                    flex: 0 0 200px;
+                    border: 1px solid white;
+                    border-radius: 4px;
+
+                    img {
+                        width: 100%;
+                        display: block;
+                    } 
+                }
+                .content-holder {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    flex-grow: 2;
+
+                    a {
+                        color: rgba(239, 137, 169, 1);
+                        font-size: 18px;
+                        text-decoration: underline;
+                        font-weight: bold;
+                    }
+                    span {
+                        color: rgb(107, 103, 103);
+                        font-size: 16px;
                     }
                 }
             }
+        }
+        .uploader-holder {
+            display: flex;
+            flex-flow: row nowrap;
+            padding-left: 20px;
+            justify-content: flex-end;
+            margin-top: auto;
+            align-items: center;
+
+            .single-uploader {
+                flex: 0 0 150px;
+
+                a {
+                    text-decoration: none;
+
+                    img {
+                        width: 60px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        border: 1px solid white;
+                    }
+                    p {
+                        margin: 0px;
+                        color: white;
+                        text-align: left;
+                        font-weight: bold;
+                        font-size: 16px;
+                        line-height: 20px;
+
+                        &:last-of-type {
+                            font-weight: normal;
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: grey;
+                        }
+                    }
+                }
+
+            }
 
         }
-
     }
 </style>

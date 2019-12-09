@@ -48,6 +48,7 @@ export default {
 
         .figure-img {
             width: 100%;
+            filter: drop-shadow(0px 0px 2px black);
         }
     }
 </style>
