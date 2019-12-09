@@ -48,10 +48,9 @@ export default {
         height: 90vh;
         position: absolute;
         top: 0px;
-        left: calc(300px + 600px);
-        // border: 1px solid white;
+        left: calc(300px + 600px + 10px);
         overflow: scroll;
-        padding-top: 20px;
+        margin-top: 20px;
         padding-right: 20px;
 
         .single {

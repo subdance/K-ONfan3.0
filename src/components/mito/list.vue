@@ -7,7 +7,7 @@
                         <a :href="item.link" target="_blank"><img :src="item.cover" alt=""></a>
                     </div>
                     <div class="content-holder">
-                        <a :href="item.link">{{item.name}}</a>
+                        <a :href="item.link" target="_blank">{{item.name}}</a>
                         <span>{{item.des}}</span>
                     </div>
                 </div>

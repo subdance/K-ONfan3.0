@@ -91,7 +91,7 @@ export default {
 
         .wrapper {
             width: 1440px;
-            height: 900px;
+            height: 100%;
             position: relative;
             margin: auto;
             overflow: hidden;
@@ -99,13 +99,14 @@ export default {
             .info {
                 position: absolute;
                 bottom: 20px;
-                right: 0px;
+                right: 100px;
                 color: grey;
                 font-size: 12px;
                 padding-right: 10px;
                 cursor: pointer;
                 line-height: 14px;
                 margin: 0px;
+                z-index: 999;
             }
             .reminder {
                 position: absolute;
