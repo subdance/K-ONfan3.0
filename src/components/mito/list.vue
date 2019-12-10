@@ -55,7 +55,7 @@ export default {
         position: absolute;
         top: 0px;
         left: 300px;
-        height: 100vh;
+        height: 700px;
         max-height: 900px;
         width: 600px;
         display: flex;

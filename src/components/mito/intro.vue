@@ -45,7 +45,7 @@ export default {
 <style lang="scss" scoped>
     .intor-holder {
         width: 300px;
-        height: 90vh;
+        height: 700px;
         position: absolute;
         top: 0px;
         left: calc(300px + 600px + 10px);

@@ -82,9 +82,10 @@ export default {
 <style lang="scss" scoped>
     .main-container {
         box-sizing: border-box;
-        width: 1440px;
+        width: 100vw;
+        min-width: 1440px;
         height: 100vh;
-        min-height: 700px;
+        min-height: 900px;
         position: relative;
         background-color: rgba(44, 45, 61, 1);
         overflow: hidden;
@@ -92,9 +93,10 @@ export default {
         .wrapper {
             width: 1440px;
             height: 100%;
+            max-height: 900px;
+            min-height: 700px;
             position: relative;
             margin: auto;
-            overflow: hidden;
 
             .info {
                 position: absolute;
