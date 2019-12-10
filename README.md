@@ -5,9 +5,8 @@
 * UI improving.
 
 ## What's next
-* Clear those old and unfriendly codes.
 * Testing live2D and webGL.
-* Updating articles monthly, in Chinese, of course .
+
 
 
 
