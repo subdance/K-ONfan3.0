@@ -54,10 +54,11 @@ export default {
     },
     computed: {
         hasPassedAll() {
+            return true;
             return this.currentQuestionIndex == this.questions.length;
         },
         isSmall() {
-            return window.innerWidth < 1200 
+            return window.innerWidth < 900
         }
     },
     created() {
@@ -83,20 +84,18 @@ export default {
     .main-container {
         box-sizing: border-box;
         width: 100vw;
-        min-width: 1440px;
         height: 100vh;
-        min-height: 900px;
         position: relative;
         background-color: rgba(44, 45, 61, 1);
-        overflow: hidden;
 
         .wrapper {
             width: 1440px;
-            height: 100%;
-            max-height: 900px;
-            min-height: 700px;
+            height: 789px;
             position: relative;
             margin: auto;
+            overflow: hidden;
+            background-color: rgba(44, 45, 61, 1);
+
 
             .info {
                 position: absolute;
