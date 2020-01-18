@@ -54,8 +54,8 @@ export default {
     },
     computed: {
         hasPassedAll() {
-            // return true;
-            return this.currentQuestionIndex == this.questions.length;
+            return true;
+            // return this.currentQuestionIndex == this.questions.length;
         },
         isSmall() {
             return window.innerWidth < 900
