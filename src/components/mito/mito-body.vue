@@ -34,7 +34,7 @@ export default {
     created() {
         setTimeout(() => {
             this.shouldMove = true;
-        }, 3000)
+        }, 1500)
     }
 }
 </script>

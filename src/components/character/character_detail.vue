@@ -439,11 +439,9 @@ export default {
   created() {
     this.generateRandom();
   },
-
   mounted() {
     // this.makeSelected();
   },
-
   methods:{
     changeDetail(index){
       this.isBigPic = false;
