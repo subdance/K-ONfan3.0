@@ -44,7 +44,7 @@ export default {
             this.uploader = grass.uploader;
             setTimeout(() => {
                 this.shouldShow = true;
-            }, 4000)
+            }, 2500)
         }
     }
 }
@@ -52,23 +52,22 @@ export default {
 
 <style lang="scss" scoped>
     .main-wrapper {
-        position: absolute;
-        top: 0px;
-        left: 300px;
-        height: 700px;
-        max-height: 900px;
+        // height: 700px;
+        // max-height: 900px;
         width: 600px;
         display: flex;
         flex-flow: column nowrap;
         padding-bottom: 20px;
         box-sizing: border-box;
+        position: relative;
+        z-index: 1;
+        padding-top: 20px;
 
         .list-holder {
             margin: auto;
-            margin-top: 20px;
             width: 100%;
-            height: 600px;
-            overflow: scroll;
+            // height: 600px;
+            // overflow: scroll;
             margin-bottom: 20px;
             border-radius: 5px;
             

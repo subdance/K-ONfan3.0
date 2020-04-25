@@ -4,23 +4,27 @@
             <mito-body
                 :lines="lines"
                 v-if="hasPassedAll"
-                ></mito-body>
-            <question 
+                >
+            </mito-body>
+            <!-- <question 
                 :question="this.questions[this.currentQuestionIndex]"
                 @pass-question="passQuestion"
                 v-if="!hasPassedAll"
                 >
-            </question>
+            </question> -->
             <bangumiList
                 v-if="hasPassedAll"
                 >
             </bangumiList>
+            <intro 
+                v-if="hasPassedAll"
+                >
+            </intro>
             <slogan 
                 :slogan='slogan'
                 v-if="hasPassedAll"
                 >
             </slogan>
-            <intro v-if="hasPassedAll"></intro>
             <p class="info" @click="toHome">这个网站的本体其实是...</p>
             <div class="reminder" v-if="isSmall">
                 喂喂，屏幕太小了，请换一个大点的哦。
@@ -84,18 +88,20 @@ export default {
     .main-container {
         box-sizing: border-box;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
         position: relative;
         background-color: rgba(44, 45, 61, 1);
 
         .wrapper {
             width: 1440px;
-            height: 789px;
+            min-height: 789px;
             position: relative;
             margin: auto;
             overflow: hidden;
             background-color: rgba(44, 45, 61, 1);
-
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-end;
 
             .info {
                 position: absolute;

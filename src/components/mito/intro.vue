@@ -36,7 +36,7 @@ export default {
             this.uploader = grass.uploader;
             setTimeout(() => {
                 this.shouldShow = true;
-            }, 5000)
+            }, 2000)
         }
     }
 }
@@ -45,13 +45,15 @@ export default {
 <style lang="scss" scoped>
     .intor-holder {
         width: 300px;
-        height: 700px;
-        position: absolute;
-        top: 0px;
-        left: calc(300px + 600px + 10px);
-        overflow: scroll;
-        margin-top: 20px;
+        // height: 700px;
+        // position: absolute;
+        // top: 0px;
+        // left: calc(300px + 600px + 10px);
+        // overflow: scroll;
+        // margin-top: 20px;
         padding-right: 20px;
+        padding-top: 20px;
+        margin-right: 200px;
 
         .single {
 

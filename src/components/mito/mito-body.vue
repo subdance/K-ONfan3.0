@@ -44,7 +44,7 @@ export default {
         position: absolute;
         width: 400px;
         height: 700px;
-        bottom: 0px;
+        top: 200px;
         left: 50%;
         transform: translate(-50%, 80%) scale(3);
 
