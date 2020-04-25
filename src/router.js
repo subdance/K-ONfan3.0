@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Charcter from './views/Character.vue'
-import TeaRoom from './views/TeaRoom.vue'
 import Video from './views/Video.vue'
 import Album from './views/Album.vue'
 import Mito from './views/Mito.vue'
@@ -21,11 +20,6 @@ export default new Router({
 			path: '/character',
 			name: 'character',
 			component: Charcter
-		},
-		{
-			path: '/blog',
-			name: 'blog',
-			component: TeaRoom
 		},
 		{
 			path: '/album',

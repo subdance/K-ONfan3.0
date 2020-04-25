@@ -13,6 +13,19 @@
                 </router-link>
             </div>
         </div>
+        <div class="single-holder">
+            <div class="wrapper">
+                <a href="https://yuiyuan.xyz/" target="_blank">
+                    <span class="navTextHome">云上茶屋&nbsp</span>
+                    <i 
+                        class="icon fa fa-coffee fa-lg" 
+                        style="vertical-align: middle"
+                        :style="{color: nowColor(index), transition: 'all 0.2s', filter: nowShadow(index)}"
+                        >
+                    </i>
+                </a>
+            </div>
+        </div>
         <div class="iconHolder">
             <a
                 href="https://baike.baidu.com/item/%E8%BD%BB%E9%9F%B3%E5%B0%91%E5%A5%B3/5182240?fr=aladdin"
@@ -52,13 +65,7 @@ export default {
                     title: '放映机',
                     router: '/video',
                     icon: 'icon fa fa-video-camera fa-lg'
-                },
-                {
-                    index: 4,
-                    title: '云上茶屋',
-                    router: '/blog',
-                    icon: 'icon fa fa-coffee fa-lg'
-                },
+                }
             ]
         }
     },
