@@ -14,6 +14,7 @@ export default {
     data() {
         return {
             shouldShow: false,
+            isNoBackToTopScreen: false,
             pics: [
                 'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/azusa-wow.gif',
                 'https://konfan.oss-cn-beijing.aliyuncs.com/image/home/mugi-wow.gif',
@@ -27,6 +28,17 @@ export default {
             trigger: 0
         }
     },
+    beforeCreate() {
+        console.log("now before create")
+        
+    },
+    created() {
+
+        console.log("now created")
+    },
+    beforeMount() {
+        console.log("now before mount")
+    },
     mounted() {
         window.onscroll = this.checkShouldShow;
     },
@@ -36,8 +48,17 @@ export default {
         }
     },
     methods: {
+        checkRoute() {
+            if (this.$route.name === "mito") {
+                this.isNoBackToTopScreen = true;  
+            } 
+            else {
+                this.isNoBackToTopScreen = false;
+            }
+        },
         checkShouldShow() {
-            this.shouldShow = document.body.scrollTop > 400 || document.documentElement.scrollTop > 400
+            this.checkRoute();
+            this.shouldShow = (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) && !this.isNoBackToTopScreen
         },
         changeToken() {
             this.trigger ++;

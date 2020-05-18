@@ -19,8 +19,7 @@
                     <span class="navTextHome">云上茶屋&nbsp</span>
                     <i 
                         class="icon fa fa-coffee fa-lg" 
-                        style="vertical-align: middle"
-                        :style="{color: nowColor(index), transition: 'all 0.2s', filter: nowShadow(index)}"
+                        style="vertical-align: middle; color: white"
                         >
                     </i>
                 </a>
