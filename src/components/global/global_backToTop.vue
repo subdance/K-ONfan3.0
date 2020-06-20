@@ -28,17 +28,6 @@ export default {
             trigger: 0
         }
     },
-    beforeCreate() {
-        console.log("now before create")
-        
-    },
-    created() {
-
-        console.log("now created")
-    },
-    beforeMount() {
-        console.log("now before mount")
-    },
     mounted() {
         window.onscroll = this.checkShouldShow;
     },
